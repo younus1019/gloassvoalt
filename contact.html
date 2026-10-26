@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#0B0B0D">
+  <title>GLOSSVAULT | Premium Car Detailing</title>
+
+  <!-- Global and Header Styles -->
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./contact.css">
+  <link rel="stylesheet" href="global.css">
+</head>
+
+<body>
+
+<!-- =========================================
+     GLOSSVAULT HEADER
+========================================= -->
+
+<header class="gv-header">
+  <div class="gv-header__container">
+
+    <!-- BRAND LOGO -->
+    <a href="index.html" class="gv-brand" aria-label="GLOSSVAULT Home">
+      <img
+        src="./images/cinematic logo.png"
+        alt="GLOSSVAULT car logo"
+        class="gv-brand__logo"
+      >
+
+      <span class="gv-brand__content">
+        <span class="gv-brand__name">
+          <span class="gv-brand__name-primary">GLOSS</span><span class="gv-brand__name-secondary">VAULT</span>
+        </span>
+
+        <span class="gv-brand__tagline">
+          PROTECT THE FINISH. PRESERVE THE GLOSS.
+        </span>
+      </span>
+    </a>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button
+      class="gv-menu-toggle"
+      id="gv-menu-toggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-controls="gv-navigation"
+      aria-expanded="false"
+    >
+      <i data-lucide="menu"></i>
+    </button>
+
+    <!-- NAVIGATION -->
+    <nav class="gv-nav" id="gv-navigation" aria-label="Main navigation">
+
+      <ul class="gv-nav__list">
+
+        <!-- HOME DROPDOWN -->
+        <li class="gv-nav__item gv-nav__item--dropdown">
+          <button
+            class="gv-nav__dropdown-trigger"
+            type="button"
+            aria-expanded="false"
+          >
+            Home
+            <i data-lucide="chevron-down"></i>
+          </button>
+
+          <ul class="gv-dropdown">
+            <li>
+              <a href="index.html" class="gv-dropdown__link">Home 1</a>
+            </li>
+            <li>
+              <a href="index2.html" class="gv-dropdown__link">Home 2</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="gv-nav__item">
+          <a href="about.html" class="gv-nav__link">About</a>
+        </li>
+
+        <li class="gv-nav__item">
+          <a href="services.html" class="gv-nav__link">Services</a>
+        </li>
+
+        <li class="gv-nav__item">
+          <a href="gallery.html" class="gv-nav__link">Gallery</a>
+        </li>
+
+        <li class="gv-nav__item">
+          <a href="contact.html" class="gv-nav__link">Contact</a>
+        </li>
+
+        <li class="gv-nav__item">
+          <a href="dashboard.html" class="gv-nav__link">Dashboard</a>
+        </li>
+
+      </ul>
+
+      <!-- MOBILE ACTIONS -->
+      <div class="gv-nav__mobile-controls">
+
+        <button
+          class="gv-icon-button"
+          id="gv-rtl-toggle-mobile"
+          type="button"
+          aria-label="Switch to right-to-left layout"
+          title="Switch to RTL"
+          aria-pressed="false"
+        >
+          <i data-lucide="languages"></i>
+        </button>
+
+        <button
+          class="gv-icon-button"
+          id="gv-theme-toggle-mobile"
+          type="button"
+          aria-label="Switch to dark mode"
+          title="Dark mode"
+          aria-pressed="false"
+        >
+          <i data-lucide="moon"></i>
+        </button>
+
+        <a href="login.html" class="gv-login gv-nav__mobile-login">
+          <i data-lucide="user-round"></i>
+          <span>Login</span>
+        </a>
+
+      </div>
+    </nav>
+
+    <!-- DESKTOP ACTIONS -->
+    <div class="gv-header__actions">
+
+      <button
+        class="gv-icon-button"
+        id="gv-rtl-toggle"
+        type="button"
+        aria-label="Switch to right-to-left layout"
+        title="Switch to RTL"
+        aria-pressed="false"
+      >
+        <i data-lucide="languages"></i>
+      </button>
+
+      <button
+        class="gv-icon-button"
+        id="gv-theme-toggle"
+        type="button"
+        aria-label="Switch to dark mode"
+        title="Dark mode"
+        aria-pressed="false"
+      >
+        <i data-lucide="moon"></i>
+      </button>
+
+      <a href="login.html" class="gv-login gv-desktop-login">
+        <i data-lucide="user-round"></i>
+        <span>Login</span>
+      </a>
+
+    </div>
+  </div>
+</header>
+
+
+
+
+<!-- GLOSSVAULT — CONTACT HERO -->
+<section class="gv-contact-hero" id="contact-hero">
+  <div class="gv-contact-hero__container">
+
+    <div class="gv-contact-hero__content">
+      <p class="gv-contact-hero__eyebrow">
+        <span></span>
+        LET'S TALK ABOUT YOUR VEHICLE
+      </p>
+
+      <h1>
+        Good Care
+        <span>Starts Here.</span>
+      </h1>
+
+      <p class="gv-contact-hero__description">
+        Tell us what your vehicle needs. We'll help you explore
+        the right detailing, refinement, and protection options.
+      </p>
+
+      <div class="gv-contact-hero__actions">
+        <a href="#contact-details" class="gv-contact-hero__primary">
+          Get in Touch
+          <i data-lucide="arrow-down-right"></i>
+        </a>
+
+        <a href="./services.html" class="gv-contact-hero__secondary">
+          Explore Services
+        </a>
+      </div>
+
+      <div class="gv-contact-hero__signature">
+        <span>PERSONALIZED CARE</span>
+        <span>PRECISION IN EVERY DETAIL</span>
+      </div>
+    </div>
+
+    <div class="gv-contact-hero__visual">
+      <img
+        src="./images/gloss 3.png"
+        alt="Luxury vehicle inside a premium automotive detailing studio"
+        fetchpriority="high"
+      />
+
+      <div class="gv-contact-hero__image-caption">
+        <span>GLOSSVAULT STUDIO</span>
+        <span>CARE THAT SHOWS</span>
+      </div>
+
+      <span class="gv-contact-hero__image-index">GV / 01</span>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- CONTACT DETAILS & ENQUIRY FORM -->
+<section class="gv-contact-details" id="contact-details">
+  <div class="gv-container">
+
+    <div class="gv-contact-details__header">
+      <span class="gv-section-eyebrow">LET'S TALK DETAILING</span>
+      <h2 class="gv-section-title">Tell Us About Your Vehicle.</h2>
+      <p>
+        From a refined interior to long-lasting ceramic protection,
+        let’s find the right treatment for your vehicle.
+      </p>
+    </div>
+
+    <div class="gv-contact-details__layout">
+
+      <!-- CONTACT INFORMATION -->
+      <div class="gv-contact-info">
+        <div class="gv-contact-info__intro">
+          <span class="gv-contact-info__number">01 / GET IN TOUCH</span>
+          <h3>Every great finish starts with a conversation.</h3>
+          <p>
+            Share your vehicle details and what you would like to improve.
+            Our team can help you choose the right service.
+          </p>
+        </div>
+
+        <div class="gv-contact-info__items">
+
+          <a class="gv-contact-info__item"
+             href="mailto:hello@glossvault.com">
+            <span class="gv-contact-info__icon">
+              <i data-lucide="mail"></i>
+            </span>
+            <span>
+              <small>EMAIL ENQUIRIES</small>
+              <strong>hello@glossvault.com</strong>
+            </span>
+            <i class="gv-contact-info__arrow" data-lucide="arrow-up-right"></i>
+          </a>
+
+          <a class="gv-contact-info__item"
+             href="tel:+910000000000">
+            <span class="gv-contact-info__icon">
+              <i data-lucide="phone"></i>
+            </span>
+            <span>
+              <small>CALL OUR STUDIO</small>
+              <strong>+91 XXXXX XXXXX</strong>
+            </span>
+            <i class="gv-contact-info__arrow" data-lucide="arrow-up-right"></i>
+          </a>
+
+          <div class="gv-contact-info__item">
+            <span class="gv-contact-info__icon">
+              <i data-lucide="clock-3"></i>
+            </span>
+            <span>
+              <small>STUDIO HOURS</small>
+              <strong>By appointment</strong>
+              <p>Contact us to arrange your visit.</p>
+            </span>
+          </div>
+
+        </div>
+
+        <div class="gv-contact-info__note">
+          <i data-lucide="shield-check"></i>
+          <p>
+            Every vehicle is different. We’ll help you understand the
+            treatment options before you make a decision.
+          </p>
+        </div>
+      </div>
+
+      <!-- ENQUIRY FORM -->
+      <div class="gv-contact-form-card">
+        <div class="gv-contact-form-card__heading">
+          <span class="gv-contact-info__number">02 / YOUR ENQUIRY</span>
+          <h3>Let's get the details.</h3>
+          <p>Complete the form and tell us what your vehicle needs.</p>
+        </div>
+
+        <form class="gv-contact-form" id="gv-contact-form">
+
+          <div class="gv-contact-form__row">
+            <div class="gv-contact-form__field">
+              <label for="gv-name">Full name *</label>
+              <input
+                type="text"
+                id="gv-name"
+                name="name"
+                placeholder="Your name"
+                autocomplete="name"
+                required
+              >
+            </div>
+
+            <div class="gv-contact-form__field">
+              <label for="gv-email">Email address *</label>
+              <input
+                type="email"
+                id="gv-email"
+                name="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="gv-contact-form__row">
+            <div class="gv-contact-form__field">
+              <label for="gv-phone">Phone number</label>
+              <input
+                type="tel"
+                id="gv-phone"
+                name="phone"
+                placeholder="+91"
+                autocomplete="tel"
+              >
+            </div>
+
+            <div class="gv-contact-form__field">
+              <label for="gv-vehicle">Vehicle details *</label>
+              <input
+                type="text"
+                id="gv-vehicle"
+                name="vehicle"
+                placeholder="e.g. BMW 3 Series"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="gv-contact-form__field">
+            <label for="gv-service">Service of interest *</label>
+            <select id="gv-service" name="service" required>
+              <option value="" disabled selected>
+                Select a service
+              </option>
+              <option value="exterior-detailing">Premium Exterior Detailing</option>
+              <option value="interior-detailing">Interior Detailing</option>
+              <option value="paint-correction">Paint Correction</option>
+              <option value="ceramic-coating">Ceramic Coating</option>
+              <option value="ppf">Paint Protection Film (PPF)</option>
+              <option value="complete-detailing">Complete Detailing</option>
+              <option value="other">Other / Not Sure Yet</option>
+            </select>
+          </div>
+
+          <div class="gv-contact-form__field">
+            <label for="gv-message">Tell us more</label>
+            <textarea
+              id="gv-message"
+              name="message"
+              rows="4"
+              placeholder="Describe your vehicle's condition or what you'd like to achieve..."
+            ></textarea>
+          </div>
+
+          <button class="gv-btn gv-btn--primary gv-contact-form__submit"
+                  type="submit">
+            <span>Prepare Enquiry</span>
+            <i data-lucide="arrow-up-right"></i>
+          </button>
+
+          <p class="gv-contact-form__status"
+             id="gv-contact-form-status"
+             aria-live="polite"></p>
+
+          <p class="gv-contact-form__disclaimer">
+            Your details should only be used to respond to your enquiry.
+          </p>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CONTACT STUDIO LOCATION -->
+<section class="gv-contact-location" id="studio-location">
+  <div class="gv-container">
+
+    <div class="gv-contact-location__header">
+      <span class="gv-section-eyebrow">FIND YOUR WAY</span>
+      <h2 class="gv-section-title">Your Vehicle's Next Chapter Starts Here.</h2>
+      <p>
+        Planning your next detailing treatment? Get in touch to arrange
+        a studio visit and discuss the right finish for your vehicle.
+      </p>
+    </div>
+
+    <div class="gv-contact-location__layout">
+
+      <!-- LOCATION EDITORIAL PANEL -->
+      <div class="gv-contact-location__content">
+        <span class="gv-contact-location__index">GLOSSVAULT / STUDIO</span>
+
+        <div class="gv-contact-location__main">
+          <span class="gv-contact-location__icon">
+            <i data-lucide="map-pin"></i>
+          </span>
+
+          <h3>Precision in every detail.</h3>
+
+          <p>
+            Meet our team, explore our detailing treatments, and find
+            the right protection for your vehicle's finish.
+          </p>
+
+          <div class="gv-contact-location__details">
+            <div>
+              <span>VISITS</span>
+              <strong>By appointment</strong>
+            </div>
+
+            <div>
+              <span>ENQUIRIES</span>
+              <strong>Contact our studio</strong>
+            </div>
+          </div>
+
+          <a class="gv-btn gv-btn--primary"
+             href="./contact.html#contact-details">
+            Arrange a Visit
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+
+        <span class="gv-contact-location__watermark">GV.</span>
+      </div>
+
+      <!-- MAP PANEL -->
+      <div class="gv-contact-location__map">
+        <div class="gv-contact-location__map-placeholder">
+          <span class="gv-contact-location__map-icon">
+            <i data-lucide="map"></i>
+          </span>
+
+          <h3>Find GLOSSVAULT</h3>
+
+          <p>
+            Add your confirmed studio address to display the correct
+            location and directions here.
+          </p>
+
+          <!-- Replace # with your actual Google Maps location link -->
+          <a class="gv-contact-location__map-link"
+             href="#studio-location"
+             aria-label="Google Maps location link not configured">
+            Studio location coming soon
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CONTACT FAQ SECTION -->
+<section class="gv-contact-faq" id="contact-faq">
+  <div class="gv-container">
+
+    <div class="gv-contact-faq__layout">
+
+      <!-- LEFT INTRODUCTION -->
+      <div class="gv-contact-faq__intro">
+        <span class="gv-section-eyebrow">GOOD TO KNOW</span>
+
+        <h2 class="gv-section-title">
+          A Few Things Worth Knowing.
+        </h2>
+
+        <p>
+          Have questions before booking your detailing service?
+          Find answers to common questions about appointments,
+          treatments, and vehicle care.
+        </p>
+
+        <div class="gv-contact-faq__help">
+          <span class="gv-contact-faq__help-icon">
+            <i data-lucide="message-circle"></i>
+          </span>
+
+          <div>
+            <strong>Still have a question?</strong>
+            <p>We're happy to help you choose the right treatment.</p>
+            <a href="#contact-details">
+              Contact our studio
+              <i data-lucide="arrow-up-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ ACCORDION -->
+      <div class="gv-contact-faq__list">
+
+        <details class="gv-contact-faq__item" open>
+          <summary>
+            <span>How do I book a detailing appointment?</span>
+            <i data-lucide="plus" class="gv-contact-faq__plus"></i>
+          </summary>
+          <div class="gv-contact-faq__answer">
+            <p>
+              Submit an enquiry through our contact form with your
+              vehicle details and preferred service. Our team can
+              discuss your requirements and help arrange an appointment.
+            </p>
+          </div>
+        </details>
+
+        <details class="gv-contact-faq__item">
+          <summary>
+            <span>Which detailing service is right for my car?</span>
+            <i data-lucide="plus" class="gv-contact-faq__plus"></i>
+          </summary>
+          <div class="gv-contact-faq__answer">
+            <p>
+              It depends on your vehicle's condition and your goals.
+              Interior detailing focuses on cabin cleanliness, paint
+              correction addresses suitable paint imperfections, and
+              ceramic coating or PPF can provide different forms of
+              paint protection. Contact us to discuss your options.
+            </p>
+          </div>
+        </details>
+
+        <details class="gv-contact-faq__item">
+          <summary>
+            <span>How long does a detailing service take?</span>
+            <i data-lucide="plus" class="gv-contact-faq__plus"></i>
+          </summary>
+          <div class="gv-contact-faq__answer">
+            <p>
+              Timing varies with the service selected, vehicle size,
+              and condition. We'll give you an estimated timeframe
+              after understanding your vehicle and treatment requirements.
+            </p>
+          </div>
+        </details>
+
+        <details class="gv-contact-faq__item">
+          <summary>
+            <span>What is the difference between ceramic coating and PPF?</span>
+            <i data-lucide="plus" class="gv-contact-faq__plus"></i>
+          </summary>
+          <div class="gv-contact-faq__answer">
+            <p>
+              Ceramic coating adds a protective surface layer that helps
+              with gloss, water repellency, and maintenance. Paint
+              Protection Film (PPF) is a physical film designed to help
+              protect paint from certain stone chips and surface impacts.
+              The right option depends on your priorities and budget.
+            </p>
+          </div>
+        </details>
+
+        <details class="gv-contact-faq__item">
+          <summary>
+            <span>Should I book an appointment before visiting?</span>
+            <i data-lucide="plus" class="gv-contact-faq__plus"></i>
+          </summary>
+          <div class="gv-contact-faq__answer">
+            <p>
+              We recommend contacting the studio before visiting so
+              your service requirements and appointment availability
+              can be discussed in advance.
+            </p>
+          </div>
+        </details>
+
+        <details class="gv-contact-faq__item">
+          <summary>
+            <span>Can I get a quote before choosing a service?</span>
+            <i data-lucide="plus" class="gv-contact-faq__plus"></i>
+          </summary>
+          <div class="gv-contact-faq__answer">
+            <p>
+              Yes. Share your vehicle model, the service you're
+              considering, and any specific concerns through the
+              enquiry form. The team can discuss suitable options
+              and pricing with you.
+            </p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- CONTACT FINAL CTA -->
+<section class="gv-contact-cta" id="contact-closing">
+  <div class="gv-container">
+
+    <div class="gv-contact-cta__panel">
+
+      <div class="gv-contact-cta__content">
+        <span class="gv-contact-cta__eyebrow">
+          YOUR NEXT FINISH STARTS HERE
+        </span>
+
+        <h2>Ready to Give Your Car the Care It Deserves?</h2>
+
+        <p>
+          Tell us about your vehicle, explore your options, and take
+          the next step towards a finish worth preserving.
+        </p>
+
+        <div class="gv-contact-cta__actions">
+          <a href="#contact-details" class="gv-btn gv-btn--primary">
+            Make an Enquiry
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+
+          <a href="./services.html" class="gv-btn gv-btn--secondary">
+            Explore Services
+            <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="gv-contact-cta__visual" aria-hidden="true">
+        <div class="gv-contact-cta__image"></div>
+        <span class="gv-contact-cta__mark">GV.</span>
+        <span class="gv-contact-cta__image-caption">
+          PRECISION IN EVERY DETAIL
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- =========================================
+     GLOSSVAULT PREMIUM FOOTER
+========================================= -->
+
+<footer class="gv-footer" id="gv-footer">
+  <div class="gv-footer__main">
+    <div class="gv-footer__container">
+
+      <!-- BRAND COLUMN -->
+      <div class="gv-footer__brand">
+
+        <a href="index.html" class="gv-footer__brand-link"
+           aria-label="GLOSSVAULT home">
+
+          <img
+            src="./images/cinematic logo.png"
+            alt="GLOSSVAULT car detailing logo"
+            class="gv-footer__logo"
+          />
+
+          <span class="gv-footer__brand-content">
+            <span class="gv-footer__brand-name">
+              <span class="gv-footer__brand-primary">GLOSS</span><span
+                class="gv-footer__brand-secondary">VAULT</span>
+            </span>
+
+            <span class="gv-footer__tagline">
+              PROTECT THE FINISH. PRESERVE THE GLOSS.
+            </span>
+          </span>
+
+        </a>
+
+        <p class="gv-footer__description">
+          Elevating automotive care through precision detailing,
+          advanced paint protection, and a relentless commitment
+          to a flawless finish.
+        </p>
+
+        <!-- SOCIAL ICONS -->
+<div class="footer-social">
+  <a href="#" aria-label="Instagram">
+    <i data-lucide="instagram"></i>
+  </a>
+
+  <a href="#" aria-label="Facebook">
+    <i data-lucide="facebook"></i>
+  </a>
+
+  <a href="#" aria-label="YouTube">
+    <i data-lucide="youtube"></i>
+  </a>
+
+  <a href="mailto:info@yourdomain.com" aria-label="Email">
+    <i data-lucide="mail"></i>
+  </a>
+</div>
+      </div>
+
+
+      <!-- QUICK LINKS -->
+      <div class="gv-footer__column">
+        <h3 class="gv-footer__heading">Quick Links</h3>
+
+        <ul class="gv-footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+
+      <!-- SERVICES -->
+      <div class="gv-footer__column">
+        <h3 class="gv-footer__heading">Our Services</h3>
+
+        <ul class="gv-footer__links">
+          <li><a href="services.html">Car Detailing</a></li>
+          <li><a href="services.html">Ceramic Coating</a></li>
+          <li><a href="services.html">Paint Correction</a></li>
+          <li><a href="services.html">Paint Protection Film</a></li>
+          <li><a href="services.html">Interior Detailing</a></li>
+        </ul>
+      </div>
+
+
+      <!-- CONTACT -->
+      <div class="gv-footer__column gv-footer__contact">
+        <h3 class="gv-footer__heading">Get In Touch</h3>
+
+        <p class="gv-footer__contact-intro">
+          Ready to restore your vehicle's brilliance?
+          Let's talk.
+        </p>
+
+        <a href="contact.html" class="gv-footer__contact-link">
+          <i data-lucide="map-pin"></i>
+          <span>Visit Our Studio</span>
+        </a>
+
+        <a href="tel:+910000000000" class="gv-footer__contact-link">
+          <i data-lucide="phone"></i>
+          <span>Contact Our Team</span>
+        </a>
+
+        <a href="mailto:info@yourdomain.com"
+           class="gv-footer__contact-link">
+          <i data-lucide="mail"></i>
+          <span>Send Us An Email</span>
+        </a>
+
+        <a href="contact.html" class="gv-footer__cta">
+          Book Your Detail
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- BOTTOM BAR -->
+  <div class="gv-footer__bottom">
+    <div class="gv-footer__bottom-container">
+
+      <p class="gv-footer__copyright">
+        © <span id="gv-footer-year"></span>
+        GLOSSVAULT. All rights reserved.
+      </p>
+
+      <div class="gv-footer__legal">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </div>
+
+      <a href="#top" class="gv-footer__back-top">
+        Back to Top
+        <i data-lucide="arrow-up"></i>
+      </a>
+
+    </div>
+  </div>
+</footer>
+
+
+
+
+<!-- MOBILE OVERLAY -->
+<div class="gv-overlay" id="gv-overlay"></div>
+
+
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script src="./index.js"></script>
+
+</body>
+</html>
+
+
+

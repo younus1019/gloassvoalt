@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GLOSSVAULT | Customer Login</title>
+
+  <meta name="description" content="Sign in to your GLOSSVAULT customer portal to manage detailing appointments and vehicle care.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="login.css">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <main class="login-page">
+
+    <!-- THEME AND RTL CONTROLS -->
+    <div class="login-tools">
+      <button type="button" id="loginThemeToggle"
+        aria-label="Toggle dark mode" title="Toggle dark mode">
+        <i data-lucide="moon"></i>
+      </button>
+
+      <button type="button" id="loginRtlToggle"
+        aria-label="Toggle RTL layout" title="Toggle RTL layout">
+        <i data-lucide="arrow-left-right"></i>
+      </button>
+    </div>
+
+    <!-- LEFT BRAND PANEL -->
+    <section class="login-showcase">
+
+      <div class="showcase-decoration showcase-circle"></div>
+      <div class="showcase-decoration showcase-ring"></div>
+
+      <div class="showcase-content">
+
+        <div class="showcase-eyebrow">
+          <span></span>
+          PREMIUM AUTOMOTIVE CARE
+        </div>
+
+        <h1>
+          Your Finish.<br>
+          <span>Our Obsession.</span>
+        </h1>
+
+        <p class="showcase-description">
+          Discover a higher standard of vehicle care with precision
+          detailing, advanced paint protection, and a finish that
+          deserves to be admired.
+        </p>
+
+        <div class="showcase-divider"></div>
+
+        <div class="showcase-features">
+
+          <div class="showcase-feature">
+            <i data-lucide="shield-check"></i>
+            <strong>Paint Protection</strong>
+          </div>
+
+          <div class="showcase-feature">
+            <i data-lucide="sparkles"></i>
+            <strong>Precision Detailing</strong>
+          </div>
+
+          <div class="showcase-feature">
+            <i data-lucide="car-front"></i>
+            <strong>Premium Finish</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="showcase-footer">
+        <i data-lucide="check-circle"></i>
+        <span>PROTECT THE FINISH. PRESERVE THE GLOSS.</span>
+      </div>
+
+    </section>
+
+    <!-- RIGHT LOGIN PANEL -->
+    <section class="login-panel">
+
+      <div class="login-card">
+
+        <!-- BRAND -->
+        <a class="brand" href="index.html" aria-label="GLOSSVAULT home">
+
+          <img src="images/cinematic logo.png" alt="GLOSSVAULT logo">
+
+          <div class="brand-content">
+            <span class="brand-name">
+              GLOSS<span class="brand-accent">VAULT</span>
+            </span>
+
+            <span class="brand-caption">
+            PROTECT THE FINISH. PRESERVE THE GLOSS.
+            </span>
+          </div>
+
+        </a>
+
+        <div class="login-eyebrow">CUSTOMER PORTAL</div>
+
+        <h2>Welcome Back</h2>
+
+        <p class="subtitle">
+          Sign in to manage your vehicle care experience.
+        </p>
+
+        <!-- LOGIN FORM -->
+        <form id="loginForm">
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+
+            <div class="input-wrapper">
+              <i data-lucide="mail"></i>
+
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Enter your email address"
+                autocomplete="username"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+
+            <div class="input-wrapper password-wrapper">
+              <i data-lucide="lock-keyhole"></i>
+
+              <input
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+              >
+
+              <button
+                type="button"
+                class="password-toggle"
+                id="togglePassword"
+                aria-label="Show password"
+                aria-pressed="false"
+              >
+                <i data-lucide="eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-options">
+            <label class="remember-option" for="rememberMe">
+              <input type="checkbox" id="rememberMe" name="rememberMe">
+              <span>Remember me</span>
+            </label>
+
+            <a href="mailto:support@glossvault.com?subject=Password%20Assistance"
+              class="forgot-link">
+              Forgot password?
+            </a>
+          </div>
+
+          <p id="loginMessage" role="status" aria-live="polite"></p>
+
+          <button class="login-button" type="submit">
+            <span>Sign In</span>
+            <i data-lucide="arrow-right"></i>
+          </button>
+
+        </form>
+
+        <div class="login-separator">
+          <span></span>
+          <p>YOUR VEHICLE CARE, ALL IN ONE PLACE</p>
+          <span></span>
+        </div>
+
+        <div class="login-benefits">
+          <div>
+            <i data-lucide="calendar-check"></i>
+            <span>Manage bookings</span>
+          </div>
+
+          <div>
+            <i data-lucide="clipboard-check"></i>
+            <span>Track treatments</span>
+          </div>
+
+          <div>
+            <i data-lucide="award"></i>
+            <span>Earn rewards</span>
+          </div>
+        </div>
+
+        
+<!-- CREATE ACCOUNT LINK -->
+<p class="create-account-link">
+  Don't have an account?
+  <a href="signup.html">Create an account</a>
+</p>
+
+
+        <a class="back-link" href="index.html">
+          <i data-lucide="arrow-left"></i>
+          <span>Back to GLOSSVAULT</span>
+        </a>
+
+       
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>

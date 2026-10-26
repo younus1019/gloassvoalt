@@ -1,0 +1,797 @@
+
+/* =========================================================
+   GLOSSVAULT — GLOBAL DESIGN SYSTEM
+   Theme: Graphite Gray + Crimson Red
+   Fonts: Cinzel + Montserrat
+========================================================= */
+
+/* -------------------------
+   GOOGLE FONTS
+------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+
+/* =========================================================
+   1. LIGHT MODE VARIABLES
+========================================================= */
+
+:root {
+  color-scheme: light;
+
+  /* Brand colors */
+  --primary: #1F2A37;
+  --secondary: #EF4444;
+  --accent: #DC2626;
+  --crimson: #EF4444;
+  --graphite: #1F2A37;
+  --charcoal: #0B0F14;
+
+  /* Text colors */
+  --text: #1F2937;
+  --heading-color: #1F2A37;
+  --muted: #64748B;
+  --white: #FFFFFF;
+  --black: #0B0F14;
+
+  /* Background colors */
+  --background: #F8FAFC;
+  --surface: #FFFFFF;
+  --surface-alt: #EEF2F6;
+  --surface-dark: #0B0F14;
+  --ivory: #F8FAFC;
+
+  /* Borders */
+  --border: #DCE2E8;
+  --border-crimson: rgba(239, 68, 68, 0.30);
+
+  /* Typography */
+  --heading-font: "Cinzel", serif;
+  --body-font: "Montserrat", sans-serif;
+
+  --body-font-size: 0.95rem;
+  --nav-font-size: 0.875rem;
+  --button-font-size: 0.875rem;
+  --small-font-size: 0.8rem;
+
+  --body-font-weight: 400;
+  --nav-font-weight: 500;
+  --button-font-weight: 600;
+  --heading-font-weight: 600;
+
+  --line-height: 1.75;
+  --heading-line-height: 1.25;
+  --letter-spacing: 0.02em;
+  --brand-letter-spacing: 0.12em;
+
+  /* Layout */
+  --container-width: 1200px;
+  --header-height: 82px;
+  --section-spacing: clamp(64px, 8vw, 112px);
+
+  /* Border radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+  --radius-round: 50%;
+
+  /* Transitions */
+  --transition: all 0.25s ease;
+  --theme-transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+
+  /* Shadows */
+  --shadow-soft: 0 6px 24px rgba(31, 42, 55, 0.06);
+  --shadow-card: 0 12px 32px rgba(31, 42, 55, 0.09);
+  --shadow-dropdown: 0 16px 40px rgba(31, 42, 55, 0.14);
+  --shadow-panel: 0 20px 50px rgba(31, 42, 55, 0.16);
+  --shadow-crimson: 0 8px 24px rgba(239, 68, 68, 0.20);
+
+  /* Primary button */
+  --primary-btn-bg: var(--secondary);
+  --primary-btn-color: #FFFFFF;
+  --primary-btn-hover-bg: #DC2626;
+  --primary-btn-hover-color: #FFFFFF;
+  --primary-btn-border: transparent;
+
+  /* Secondary button */
+  --secondary-btn-bg: transparent;
+  --secondary-btn-color: var(--primary);
+  --secondary-btn-hover-bg: var(--primary);
+  --secondary-btn-hover-color: #FFFFFF;
+  --secondary-btn-border: var(--primary);
+
+  /* Header */
+  --header-bg: rgba(248, 250, 252, 0.97);
+  --header-text: var(--primary);
+  --header-border: var(--border);
+
+  /* Forms */
+  --input-bg: var(--surface);
+  --input-text: var(--text);
+  --input-placeholder: #64748B;
+  --input-border: var(--border);
+  --input-focus-border: var(--secondary);
+  --focus-ring: rgba(239, 68, 68, 0.16);
+
+  /* Overlays */
+  --overlay: rgba(11, 15, 20, 0.60);
+
+  /* Selection */
+  --selection-bg: var(--secondary);
+  --selection-text: #FFFFFF;
+}
+
+
+/* =========================================================
+   2. DARK MODE VARIABLES
+========================================================= */
+
+body.dark-mode {
+  color-scheme: dark;
+
+  /* Brand colors */
+  --primary: #F8FAFC;
+  --secondary: #FF4D5A;
+  --accent: #FF6B75;
+  --crimson: #FF4D5A;
+  --graphite: #1F2A37;
+  --charcoal: #0B0F14;
+
+  /* Text colors */
+  --text: #F1F5F9;
+  --heading-color: #FFFFFF;
+  --muted: #B6C0CC;
+  --white: #FFFFFF;
+  --black: #0B0F14;
+
+  /* Background colors */
+  --background: #0B0F14;
+  --surface: #151B23;
+  --surface-alt: #1F2A37;
+  --surface-dark: #07090D;
+  --ivory: #F1F5F9;
+
+  /* Borders */
+  --border: #303B49;
+  --border-crimson: rgba(255, 77, 90, 0.35);
+
+  /* Typography */
+  --heading-font: "Cinzel", serif;
+  --body-font: "Montserrat", sans-serif;
+
+  /* Shadows */
+  --shadow-soft: 0 6px 24px rgba(0, 0, 0, 0.24);
+  --shadow-card: 0 12px 32px rgba(0, 0, 0, 0.32);
+  --shadow-dropdown: 0 16px 40px rgba(0, 0, 0, 0.46);
+  --shadow-panel: 0 20px 50px rgba(0, 0, 0, 0.55);
+  --shadow-crimson: 0 8px 24px rgba(255, 77, 90, 0.16);
+
+  /* Primary button */
+  --primary-btn-bg: var(--secondary);
+  --primary-btn-color: #FFFFFF;
+  --primary-btn-hover-bg: #E02F40;
+  --primary-btn-hover-color: #FFFFFF;
+  --primary-btn-border: transparent;
+
+  /* Secondary button */
+  --secondary-btn-bg: transparent;
+  --secondary-btn-color: #FF6B75;
+  --secondary-btn-hover-bg: #FF4D5A;
+  --secondary-btn-hover-color: #FFFFFF;
+  --secondary-btn-border: rgba(255, 77, 90, 0.50);
+
+  /* Header */
+  --header-bg: rgba(11, 15, 20, 0.97);
+  --header-text: #F8FAFC;
+  --header-border: #303B49;
+
+  /* Forms */
+  --input-bg: #151B23;
+  --input-text: #F1F5F9;
+  --input-placeholder: #A0ACBA;
+  --input-border: #394656;
+  --input-focus-border: #FF4D5A;
+  --focus-ring: rgba(255, 77, 90, 0.20);
+
+  /* Overlays */
+  --overlay: rgba(0, 0, 0, 0.72);
+
+  /* Selection */
+  --selection-bg: #FF4D5A;
+  --selection-text: #FFFFFF;
+}
+
+
+/* =========================================================
+   3. GLOBAL RESET
+========================================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-height) + 16px);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  transition: var(--theme-transition);
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--body-font);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  padding-left: 1.25rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 1rem;
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-height);
+  letter-spacing: 0.01em;
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 5vw, 4.5rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+small,
+.small-text {
+  font-size: var(--small-font-size);
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+::selection {
+  background: var(--selection-bg);
+  color: var(--selection-text);
+}
+
+
+/* =========================================================
+   4. ACCESSIBILITY
+========================================================= */
+
+:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 4px;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+/* =========================================================
+   5. CONTAINER AND SECTION UTILITIES
+========================================================= */
+
+.gv-container,
+.container {
+  width: min(calc(100% - 40px), var(--container-width));
+  margin-inline: auto;
+}
+
+.gv-section,
+.section {
+  padding-block: var(--section-spacing);
+}
+
+.section-heading {
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+.section-description {
+  max-width: 720px;
+  margin-inline: auto;
+  color: var(--muted);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-crimson {
+  color: var(--secondary);
+}
+
+.bg-surface {
+  background: var(--surface);
+}
+
+.bg-surface-alt {
+  background: var(--surface-alt);
+}
+
+
+/* =========================================================
+   6. BUTTONS
+========================================================= */
+
+.btn,
+.gv-btn,
+button.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 44px;
+  padding: 0.75rem 1.4rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
+  line-height: 1.3;
+  text-align: center;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn-primary,
+.gv-btn--primary {
+  background: var(--primary-btn-bg);
+  color: var(--primary-btn-color);
+  border-color: var(--primary-btn-border);
+}
+
+.btn-primary:hover,
+.gv-btn--primary:hover {
+  background: var(--primary-btn-hover-bg);
+  color: var(--primary-btn-hover-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-crimson);
+}
+
+.btn-secondary,
+.gv-btn--secondary {
+  background: var(--secondary-btn-bg);
+  color: var(--secondary-btn-color);
+  border-color: var(--secondary-btn-border);
+}
+
+.btn-secondary:hover,
+.gv-btn--secondary:hover {
+  background: var(--secondary-btn-hover-bg);
+  color: var(--secondary-btn-hover-color);
+  border-color: var(--secondary-btn-hover-bg);
+  transform: translateY(-2px);
+}
+
+.btn:disabled,
+.gv-btn:disabled {
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+
+/* =========================================================
+   7. LINKS
+========================================================= */
+
+.content-link {
+  color: var(--secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.25s ease;
+}
+
+.content-link:hover {
+  color: var(--accent);
+}
+
+
+/* =========================================================
+   8. CARDS
+========================================================= */
+
+.card,
+.gv-card {
+  overflow: hidden;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  transition: var(--theme-transition), transform 0.25s ease;
+}
+
+.card:hover,
+.gv-card:hover {
+  box-shadow: var(--shadow-card);
+}
+
+.card__content,
+.gv-card__content {
+  padding: 1.5rem;
+}
+
+.card__title,
+.gv-card__title {
+  color: var(--heading-color);
+}
+
+.card__description,
+.gv-card__description {
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   9. FORMS
+========================================================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+label {
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  min-height: 46px;
+  padding: 0.75rem 0.9rem;
+  background: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--input-placeholder);
+  opacity: 1;
+}
+
+select {
+  cursor: pointer;
+}
+
+select option {
+  background: var(--input-bg);
+  color: var(--input-text);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--input-focus-border);
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  min-height: auto;
+  accent-color: var(--secondary);
+}
+
+input[type="checkbox"]:focus-visible,
+input[type="radio"]:focus-visible {
+  outline-offset: 3px;
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   10. HEADER THEME HELPERS
+   Use these only when they match your existing header classes.
+========================================================= */
+
+.gv-header {
+  background: var(--header-bg);
+  color: var(--header-text);
+  border-bottom: 1px solid var(--header-border);
+  transition: var(--theme-transition);
+}
+
+.gv-brand__name-primary {
+  color: var(--primary);
+}
+
+.gv-brand__name-secondary {
+  color: var(--secondary);
+}
+
+.gv-brand__tagline {
+  color: var(--muted);
+}
+
+.gv-nav__link,
+.gv-dropdown__link {
+  color: var(--header-text);
+  transition: color 0.25s ease;
+}
+
+.gv-nav__link:hover,
+.gv-nav__link:focus-visible,
+.gv-nav__link.active,
+.gv-dropdown__link:hover {
+  color: var(--secondary);
+}
+
+.gv-icon-button {
+  color: var(--header-text);
+  border-color: var(--header-border);
+  transition: var(--theme-transition);
+}
+
+.gv-icon-button:hover {
+  color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+
+/* =========================================================
+   11. THEME TRANSITIONS
+========================================================= */
+
+body,
+header,
+footer,
+section,
+article,
+.card,
+.gv-card,
+button,
+input,
+textarea,
+select {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* =========================================================
+   12. RESPONSIVE UTILITIES
+========================================================= */
+
+@media (max-width: 768px) {
+  :root {
+    --header-height: 72px;
+    --section-spacing: clamp(48px, 9vw, 76px);
+  }
+
+  .gv-container,
+  .container {
+    width: min(calc(100% - 32px), var(--container-width));
+  }
+
+  .btn,
+  .gv-btn {
+    padding: 0.75rem 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --body-font-size: 0.9rem;
+    --nav-font-size: 0.85rem;
+    --button-font-size: 0.82rem;
+  }
+
+  .gv-container,
+  .container {
+    width: calc(100% - 28px);
+  }
+}
+
+
+
+/* =========================================
+   GLOSSVAULT — GLOBAL SECTION HEADINGS
+   Consistent Across the Entire Website
+========================================= */
+
+:root {
+  --gv-heading-font: "Cinzel", serif;
+  --gv-body-font: "Montserrat", sans-serif;
+
+  --gv-heading-color: #1F2A37;
+  --gv-heading-accent: #EF4444;
+  --gv-heading-muted: #64748B;
+
+  --gv-heading-size: clamp(28px, 3.2vw, 42px);
+  --gv-heading-line-height: 1.3;
+  --gv-heading-weight: 600;
+  --gv-heading-spacing: -0.02em;
+}
+
+/* Global section title */
+.gv-section-title {
+  margin: 0;
+  color: var(--gv-heading-color);
+  font-family: var(--gv-heading-font);
+  font-size: var(--gv-heading-size);
+  font-weight: var(--gv-heading-weight);
+  line-height: var(--gv-heading-line-height);
+  letter-spacing: var(--gv-heading-spacing);
+}
+
+/* Crimson accent inside headings */
+.gv-section-title span {
+  color: var(--gv-heading-accent);
+}
+
+/* Optional eyebrow above headings */
+.gv-section-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--gv-heading-accent);
+  font-family: var(--gv-body-font);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+/* Optional consistent heading container */
+.gv-section-header {
+  width: min(100%, 780px);
+  margin: 0 auto 44px;
+  text-align: center;
+}
+
+/* Dark mode */
+body.dark-mode {
+  --gv-heading-color: #FFFFFF;
+  --gv-heading-muted: #B6C0CC;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  :root {
+    --gv-heading-size: clamp(25px, 7vw, 32px);
+  }
+
+  .gv-section-header {
+    margin-bottom: 30px;
+  }
+}

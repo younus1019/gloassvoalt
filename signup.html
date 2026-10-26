@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>GLOSSVAULT | Create Account</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="signup.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <main class="signup-page">
+
+    <!-- THEME AND RTL CONTROLS -->
+    <div class="signup-tools">
+      <button type="button" id="signupThemeToggle" aria-label="Toggle dark mode">
+        <i data-lucide="moon"></i>
+      </button>
+
+      <button type="button" id="signupRtlToggle" aria-label="Toggle RTL layout">
+        <i data-lucide="arrow-left-right"></i>
+      </button>
+    </div>
+
+    <!-- LEFT SHOWCASE -->
+    <section class="signup-showcase">
+      <div class="signup-decoration signup-circle"></div>
+      <div class="signup-decoration signup-ring"></div>
+
+      <div class="signup-showcase-content">
+        <div class="signup-eyebrow">
+          <span></span>
+          PREMIUM AUTOMOTIVE CARE
+        </div>
+
+        <h1>
+          Your Car.<br>
+          <span>Your Standard.</span>
+        </h1>
+
+        <p class="signup-description">
+          Join GLOSSVAULT and take control of your vehicle's detailing
+          appointments, paint protection services, and premium car care.
+        </p>
+
+        <div class="signup-divider"></div>
+
+        <div class="signup-features">
+          <div class="signup-feature">
+            <i data-lucide="shield-check"></i>
+            <strong>Trusted Protection</strong>
+          </div>
+
+          <div class="signup-feature">
+            <i data-lucide="calendar-check"></i>
+            <strong>Easy Bookings</strong>
+          </div>
+
+          <div class="signup-feature">
+            <i data-lucide="sparkles"></i>
+            <strong>Premium Detailing</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="signup-showcase-footer">
+        <i data-lucide="check-circle"></i>
+        <span>PROTECT THE FINISH. PRESERVE THE GLOSS.</span>
+      </div>
+    </section>
+
+    <!-- RIGHT SIGNUP PANEL -->
+    <section class="signup-panel">
+      <div class="signup-card">
+
+        <a class="signup-brand" href="index.html" aria-label="GLOSSVAULT home">
+          <img src="images/cinematic logo.png" alt="GLOSSVAULT logo">
+
+          <span class="signup-brand-content">
+            <span class="signup-brand-name">
+              GLOSS<span>VAULT</span>
+            </span>
+            <span class="signup-brand-caption">PROTECT THE FINISH. PRESERVE THE GLOSS.</span>
+          </span>
+        </a>
+
+        <div class="signup-eyebrow-right">CUSTOMER PORTAL</div>
+
+        <h2>Create Account</h2>
+
+        <p class="signup-subtitle">
+          Get started with your personalized vehicle care experience.
+        </p>
+
+        <form id="signupForm">
+
+          <div class="signup-form-group">
+            <label for="fullName">Full Name</label>
+            <div class="signup-input-wrapper">
+              <i data-lucide="user-round"></i>
+              <input
+                id="fullName"
+                name="fullName"
+                type="text"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="signup-form-group">
+            <label for="signupEmail">Email Address</label>
+            <div class="signup-input-wrapper">
+              <i data-lucide="mail"></i>
+              <input
+                id="signupEmail"
+                name="email"
+                type="email"
+                placeholder="Enter your email address"
+                autocomplete="email"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="signup-form-group">
+            <label for="phone">Phone Number</label>
+            <div class="signup-input-wrapper">
+              <i data-lucide="phone"></i>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                placeholder="Enter your phone number"
+                autocomplete="tel"
+                inputmode="tel"
+                required
+              >
+            </div>
+          </div>
+
+          <div class="signup-form-group">
+            <label for="signupPassword">Password</label>
+            <div class="signup-input-wrapper">
+              <i data-lucide="lock-keyhole"></i>
+              <input
+                id="signupPassword"
+                name="password"
+                type="password"
+                placeholder="Create a password"
+                autocomplete="new-password"
+                minlength="8"
+                required
+              >
+              <button
+                type="button"
+                class="signup-password-toggle"
+                data-password-target="signupPassword"
+                aria-label="Show password"
+                aria-pressed="false"
+              >
+                <i data-lucide="eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="signup-form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <div class="signup-input-wrapper">
+              <i data-lucide="shield-check"></i>
+              <input
+                id="confirmPassword"
+                name="confirmPassword"
+                type="password"
+                placeholder="Confirm your password"
+                autocomplete="new-password"
+                minlength="8"
+                required
+              >
+              <button
+                type="button"
+                class="signup-password-toggle"
+                data-password-target="confirmPassword"
+                aria-label="Show password"
+                aria-pressed="false"
+              >
+                <i data-lucide="eye"></i>
+              </button>
+            </div>
+          </div>
+
+          <label class="signup-terms" for="acceptTerms">
+            <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+            <span>
+              I agree to the <a href="terms.html">Terms &amp; Conditions</a>
+              and <a href="privacy.html">Privacy Policy</a>.
+            </span>
+          </label>
+
+          <p id="signupMessage" role="status" aria-live="polite"></p>
+
+          <button class="signup-submit" type="submit">
+            <span>Create Account</span>
+            <i data-lucide="arrow-right"></i>
+          </button>
+        </form>
+
+        <p class="signup-login-link">
+          Already have an account?
+          <a href="login.html">Sign In</a>
+        </p>
+
+        <a class="signup-back-link" href="index.html">
+          <i data-lucide="arrow-left"></i>
+          <span>Back to GLOSSVAULT</span>
+        </a>
+
+        
+      </div>
+    </section>
+  </main>
+
+  <script src="signup.js"></script>
+</body>
+</html>

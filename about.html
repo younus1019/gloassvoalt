@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#0B0B0D">
+  <title>About us</title>
+
+  <!-- Global and Header Styles -->
+  <link rel="stylesheet" href="./main.css">
+  <link rel="stylesheet" href="./about.css">
+  <link rel="stylesheet" href="global.css">
+</head>
+
+<body>
+
+<!-- =========================================
+     GLOSSVAULT HEADER
+========================================= -->
+
+<header class="gv-header">
+  <div class="gv-header__container">
+
+    <!-- BRAND LOGO -->
+    <a href="index.html" class="gv-brand" aria-label="GLOSSVAULT Home">
+      <img
+        src="./images/cinematic logo.png"
+        alt="GLOSSVAULT car logo"
+        class="gv-brand__logo"
+      >
+
+      <span class="gv-brand__content">
+        <span class="gv-brand__name">
+          <span class="gv-brand__name-primary">GLOSS</span><span class="gv-brand__name-secondary">VAULT</span>
+        </span>
+
+        <span class="gv-brand__tagline">
+          PROTECT THE FINISH. PRESERVE THE GLOSS.
+        </span>
+      </span>
+    </a>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button
+      class="gv-menu-toggle"
+      id="gv-menu-toggle"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-controls="gv-navigation"
+      aria-expanded="false"
+    >
+      <i data-lucide="menu"></i>
+    </button>
+
+    <!-- NAVIGATION -->
+    <nav class="gv-nav" id="gv-navigation" aria-label="Main navigation">
+
+      <ul class="gv-nav__list">
+
+        <!-- HOME DROPDOWN -->
+        <li class="gv-nav__item gv-nav__item--dropdown">
+          <button
+            class="gv-nav__dropdown-trigger"
+            type="button"
+            aria-expanded="false"
+          >
+            Home
+            <i data-lucide="chevron-down"></i>
+          </button>
+
+          <ul class="gv-dropdown">
+            <li>
+              <a href="index.html" class="gv-dropdown__link">Home 1</a>
+            </li>
+            <li>
+              <a href="index2.html" class="gv-dropdown__link">Home 2</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="gv-nav__item">
+          <a href="about.html" class="gv-nav__link">About</a>
+        </li>
+
+        <li class="gv-nav__item">
+          <a href="services.html" class="gv-nav__link">Services</a>
+        </li>
+
+        <li class="gv-nav__item">
+          <a href="gallery.html" class="gv-nav__link">Gallery</a>
+        </li>
+
+        <li class="gv-nav__item">
+          <a href="contact.html" class="gv-nav__link">Contact</a>
+        </li>
+
+        <li class="gv-nav__item">
+          <a href="dashboard.html" class="gv-nav__link">Dashboard</a>
+        </li>
+
+      </ul>
+
+      <!-- MOBILE ACTIONS -->
+      <div class="gv-nav__mobile-controls">
+
+        <button
+          class="gv-icon-button"
+          id="gv-rtl-toggle-mobile"
+          type="button"
+          aria-label="Switch to right-to-left layout"
+          title="Switch to RTL"
+          aria-pressed="false"
+        >
+          <i data-lucide="languages"></i>
+        </button>
+
+        <button
+          class="gv-icon-button"
+          id="gv-theme-toggle-mobile"
+          type="button"
+          aria-label="Switch to dark mode"
+          title="Dark mode"
+          aria-pressed="false"
+        >
+          <i data-lucide="moon"></i>
+        </button>
+
+        <a href="login.html" class="gv-login gv-nav__mobile-login">
+          <i data-lucide="user-round"></i>
+          <span>Login</span>
+        </a>
+
+      </div>
+    </nav>
+
+    <!-- DESKTOP ACTIONS -->
+    <div class="gv-header__actions">
+
+      <button
+        class="gv-icon-button"
+        id="gv-rtl-toggle"
+        type="button"
+        aria-label="Switch to right-to-left layout"
+        title="Switch to RTL"
+        aria-pressed="false"
+      >
+        <i data-lucide="languages"></i>
+      </button>
+
+      <button
+        class="gv-icon-button"
+        id="gv-theme-toggle"
+        type="button"
+        aria-label="Switch to dark mode"
+        title="Dark mode"
+        aria-pressed="false"
+      >
+        <i data-lucide="moon"></i>
+      </button>
+
+      <a href="login.html" class="gv-login gv-desktop-login">
+        <i data-lucide="user-round"></i>
+        <span>Login</span>
+      </a>
+
+    </div>
+  </div>
+</header>
+
+
+
+<!-- =========================================
+     GLOSSVAULT — ABOUT PAGE HERO
+========================================= -->
+<section class="gv-about-hero" id="about-hero">
+  <div class="gv-container">
+
+    <div class="gv-about-hero__grid">
+
+      <!-- LEFT: BRAND STORY -->
+      <div class="gv-about-hero__content">
+
+        <div class="gv-about-hero__eyebrow">
+          <span class="gv-about-hero__eyebrow-line"></span>
+          <span>THE STORY BEHIND GLOSSVAULT</span>
+        </div>
+
+        <h1>
+          More Than<br>
+          a <span>Finish.</span>
+        </h1>
+
+        <p class="gv-about-hero__description">
+          We believe exceptional automotive care goes beyond
+          appearance. It's about precision, thoughtful protection,
+          and preserving the details that make every vehicle special.
+        </p>
+
+        <a href="#our-story" class="gv-about-hero__link">
+          DISCOVER OUR STORY
+          <span aria-hidden="true">↗</span>
+        </a>
+
+        <div class="gv-about-hero__signature">
+          <span class="gv-about-hero__signature-mark">GV.</span>
+          <span>PROTECT THE FINISH. PRESERVE THE GLOSS.</span>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: CINEMATIC IMAGE -->
+      <div class="gv-about-hero__visual">
+
+        <img
+          src="./images/about hero img (3).png"
+          alt="Luxury vehicle with a deep gloss finish inside a premium detailing studio"
+          fetchpriority="high"
+        >
+
+        <div class="gv-about-hero__image-shade"></div>
+
+        <div class="gv-about-hero__image-label">
+          <span>OUR PHILOSOPHY</span>
+          <span>01 / THE BEGINNING</span>
+        </div>
+
+        <div class="gv-about-hero__image-caption">
+          <span class="gv-about-hero__caption-line"></span>
+          <p>Every detail has a purpose.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- BOTTOM EDITORIAL STRIP -->
+    <div class="gv-about-hero__bottom">
+      <span>BUILT AROUND PRECISION</span>
+      <span class="gv-about-hero__bottom-dot"></span>
+      <span>DRIVEN BY DETAIL</span>
+      <span class="gv-about-hero__bottom-dot"></span>
+      <span>DEFINED BY CARE</span>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================
+     GLOSSVAULT ABOUT — BRAND PHILOSOPHY
+========================================= -->
+<section class="gv-about-philosophy" id="our-story">
+  <div class="gv-container">
+
+    <div class="gv-about-philosophy__top">
+      <span class="gv-section-eyebrow">
+        OUR PHILOSOPHY / 02
+      </span>
+      <span class="gv-about-philosophy__top-note">
+        CARE IS IN THE DETAILS.
+      </span>
+    </div>
+
+    <div class="gv-about-philosophy__layout">
+
+      <!-- LEFT: EDITORIAL STATEMENT -->
+      <div class="gv-about-philosophy__intro">
+        <span class="gv-about-philosophy__index">
+          GV — THE WAY WE SEE IT
+        </span>
+
+        <h2>
+          A better finish<br>
+          begins with<br>
+          <span>a better approach.</span>
+        </h2>
+
+        <p>
+          At GLOSSVAULT, automotive care is about more than
+          making a vehicle look good. It is about understanding
+          its finish, choosing the right treatment, and giving
+          every detail the attention it deserves.
+        </p>
+
+        <div class="gv-about-philosophy__signature">
+          <span class="gv-about-philosophy__signature-line"></span>
+          <span>PROTECT THE FINISH. PRESERVE THE GLOSS.</span>
+        </div>
+      </div>
+
+      <!-- RIGHT: THREE PRINCIPLES -->
+      <div class="gv-about-philosophy__principles">
+
+        <article class="gv-about-philosophy__principle">
+          <span class="gv-about-philosophy__number">01</span>
+
+          <div class="gv-about-philosophy__principle-content">
+            <h3>Understand Before We Treat</h3>
+            <p>
+              Every vehicle has different needs. Understanding
+              its condition helps guide a considered approach
+              to detailing and protection.
+            </p>
+          </div>
+
+          <span class="gv-about-philosophy__arrow"
+                aria-hidden="true">↗</span>
+        </article>
+
+        <article class="gv-about-philosophy__principle">
+          <span class="gv-about-philosophy__number">02</span>
+
+          <div class="gv-about-philosophy__principle-content">
+            <h3>Precision Over Shortcuts</h3>
+            <p>
+              Preparation, technique, and attention to detail
+              matter. The process deserves as much care as
+              the finished result.
+            </p>
+          </div>
+
+          <span class="gv-about-philosophy__arrow"
+                aria-hidden="true">↗</span>
+        </article>
+
+        <article class="gv-about-philosophy__principle">
+          <span class="gv-about-philosophy__number">03</span>
+
+          <div class="gv-about-philosophy__principle-content">
+            <h3>Protection With Purpose</h3>
+            <p>
+              The right protection should suit the vehicle,
+              its finish, and the owner's expectations rather
+              than follow a one-size-fits-all approach.
+            </p>
+          </div>
+
+          <span class="gv-about-philosophy__arrow"
+                aria-hidden="true">↗</span>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- BOTTOM STATEMENT -->
+    <div class="gv-about-philosophy__footer">
+      <span class="gv-about-philosophy__footer-mark">GV.</span>
+
+      <p>
+        IT'S NOT JUST ABOUT THE WAY IT LOOKS.<br>
+        IT'S ABOUT THE CARE THAT GETS IT THERE.
+      </p>
+
+      <span class="gv-about-philosophy__footer-label">
+        THE GLOSSVAULT PHILOSOPHY
+      </span>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- =========================================
+     GLOSSVAULT ABOUT — OUR APPROACH
+========================================= -->
+<section class="gv-about-approach" id="our-approach">
+  <div class="gv-container">
+
+    <div class="gv-about-approach__header">
+      <div>
+        <span class="gv-section-eyebrow">
+          OUR APPROACH / 03
+        </span>
+        <h2>
+          Care, with a<br>
+          <span>clear purpose.</span>
+        </h2>
+      </div>
+
+      <p>
+        Every vehicle deserves a considered approach.
+        We focus on understanding its condition, preparing
+        it carefully, and selecting treatments with purpose.
+      </p>
+    </div>
+
+    <div class="gv-about-approach__feature">
+
+      <div class="gv-about-approach__image">
+        <img
+          src="./images/gloass 5.jfif"
+          alt="Detailing specialist carefully inspecting a vehicle's paintwork"
+          loading="lazy"
+        >
+
+        <span class="gv-about-approach__image-label">
+          THE PROCESS MATTERS
+        </span>
+      </div>
+
+      <div class="gv-about-approach__statement">
+        <span class="gv-about-approach__quote-mark" aria-hidden="true">“</span>
+
+        <p>
+          The right result begins long before the final polish.
+        </p>
+
+        <span class="gv-about-approach__statement-line"></span>
+
+        <span class="gv-about-approach__statement-label">
+          OUR COMMITMENT TO THE CRAFT
+        </span>
+      </div>
+
+    </div>
+
+    <div class="gv-about-approach__process">
+
+      <div class="gv-about-approach__process-heading">
+        <span>FROM FIRST LOOK TO FINAL REVIEW</span>
+        <span>FOUR CONSIDERED STAGES</span>
+      </div>
+
+      <div class="gv-about-approach__timeline">
+
+        <article class="gv-about-approach__step">
+          <div class="gv-about-approach__step-top">
+            <span>01</span>
+            <span class="gv-about-approach__step-dot"></span>
+          </div>
+
+          <h3>Understand</h3>
+
+          <p>
+            Assess the vehicle's condition and identify
+            the areas that need attention.
+          </p>
+        </article>
+
+        <article class="gv-about-approach__step">
+          <div class="gv-about-approach__step-top">
+            <span>02</span>
+            <span class="gv-about-approach__step-dot"></span>
+          </div>
+
+          <h3>Prepare</h3>
+
+          <p>
+            Establish the right foundation through
+            careful preparation.
+          </p>
+        </article>
+
+        <article class="gv-about-approach__step">
+          <div class="gv-about-approach__step-top">
+            <span>03</span>
+            <span class="gv-about-approach__step-dot"></span>
+          </div>
+
+          <h3>Treat</h3>
+
+          <p>
+            Apply the selected detailing or protection
+            treatment with attention to the finish.
+          </p>
+        </article>
+
+        <article class="gv-about-approach__step">
+          <div class="gv-about-approach__step-top">
+            <span>04</span>
+            <span class="gv-about-approach__step-dot"></span>
+          </div>
+
+          <h3>Review</h3>
+
+          <p>
+            Review the completed work against
+            the agreed treatment expectations.
+          </p>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="gv-about-approach__footer">
+      <span>GV.</span>
+      <p>THOUGHTFUL WORK. CONSIDERED RESULTS.</p>
+      <a href="./contact.html">
+        TALK TO OUR TEAM <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- =========================================
+     GLOSSVAULT ABOUT — CINEMATIC MANIFESTO
+========================================= -->
+<section class="gv-about-manifesto" id="what-we-stand-for">
+  <div class="gv-container">
+
+    <div class="gv-about-manifesto__heading">
+      <span class="gv-section-eyebrow">04 / WHAT DEFINES US</span>
+      <span class="gv-about-manifesto__edition">THE GLOSSVAULT STANDARD</span>
+    </div>
+
+    <!-- FULL-WIDTH CINEMATIC PANEL -->
+    <div class="gv-about-manifesto__scene">
+
+      <img
+        class="gv-about-manifesto__image"
+        src="./images/service img 4.jfif"
+        alt="Close-up of a luxury car's polished bodywork reflecting studio lights"
+        loading="lazy"
+      >
+
+      <div class="gv-about-manifesto__overlay"></div>
+
+      <div class="gv-about-manifesto__scene-top">
+        <span>BEHIND EVERY REFLECTION</span>
+        <span>GLOSSVAULT®</span>
+      </div>
+
+      <div class="gv-about-manifesto__message">
+        <span class="gv-about-manifesto__accent"></span>
+
+        <p class="gv-about-manifesto__pretitle">
+          MORE THAN APPEARANCE.
+        </p>
+
+        <h2>
+          We care about<br>
+          <span>what lies behind the gloss.</span>
+        </h2>
+
+        <p class="gv-about-manifesto__description">
+          The thought behind every treatment. The precision
+          behind every finish. The care behind every decision.
+        </p>
+      </div>
+
+      <div class="gv-about-manifesto__scene-bottom">
+        <span>01 — PRECISION</span>
+        <span>02 — INTEGRITY</span>
+        <span>03 — PRESERVATION</span>
+      </div>
+
+    </div>
+
+    <!-- THREE DISTINCT BRAND PILLARS -->
+    <div class="gv-about-manifesto__pillars">
+
+      <article class="gv-about-manifesto__pillar">
+        <span class="gv-about-manifesto__pillar-mark">P.</span>
+        <div>
+          <h3>Precision</h3>
+          <p>Every detail deserves attention.</p>
+        </div>
+      </article>
+
+      <article class="gv-about-manifesto__pillar">
+        <span class="gv-about-manifesto__pillar-mark">I.</span>
+        <div>
+          <h3>Integrity</h3>
+          <p>Every recommendation has a purpose.</p>
+        </div>
+      </article>
+
+      <article class="gv-about-manifesto__pillar">
+        <span class="gv-about-manifesto__pillar-mark">C.</span>
+        <div>
+          <h3>Care</h3>
+          <p>Every finish deserves thoughtful treatment.</p>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- =========================================
+     GLOSSVAULT ABOUT — FINAL CTA
+========================================= -->
+<section class="gv-about-cta" id="about-contact">
+  <div class="gv-container">
+
+    <div class="gv-about-cta__panel">
+
+      <div class="gv-about-cta__accent"></div>
+
+      <div class="gv-about-cta__top">
+        <span class="gv-section-eyebrow">THE NEXT STEP / 05</span>
+        <span class="gv-about-cta__label">LET'S TALK ABOUT YOUR VEHICLE</span>
+      </div>
+
+      <div class="gv-about-cta__main">
+        <div class="gv-about-cta__message">
+          <h2>
+            Give your vehicle<br>
+            the care it <span>deserves.</span>
+          </h2>
+
+          <p>
+            Tell us about your vehicle, your goals, and the finish
+            you want to preserve. We'll help you explore the right
+            detailing and protection options.
+          </p>
+        </div>
+
+        <div class="gv-about-cta__action">
+          <span class="gv-about-cta__action-note">
+            YOUR VEHICLE. YOUR NEEDS. A CONSIDERED APPROACH.
+          </span>
+
+          <a href="./contact.html" class="gv-about-cta__button">
+            TALK TO OUR TEAM
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <span class="gv-about-cta__response">
+            START WITH A CONVERSATION
+          </span>
+        </div>
+      </div>
+
+      <div class="gv-about-cta__bottom">
+        <span class="gv-about-cta__brand">GV<span>.</span></span>
+        <span>PROTECT THE FINISH. PRESERVE THE GLOSS.</span>
+        <span class="gv-about-cta__closing">CARE BEYOND THE SURFACE.</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- =========================================
+     GLOSSVAULT PREMIUM FOOTER
+========================================= -->
+
+<footer class="gv-footer" id="gv-footer">
+  <div class="gv-footer__main">
+    <div class="gv-footer__container">
+
+      <!-- BRAND COLUMN -->
+      <div class="gv-footer__brand">
+
+        <a href="index.html" class="gv-footer__brand-link"
+           aria-label="GLOSSVAULT home">
+
+          <img
+            src="./images/cinematic logo.png"
+            alt="GLOSSVAULT car detailing logo"
+            class="gv-footer__logo"
+          />
+
+          <span class="gv-footer__brand-content">
+            <span class="gv-footer__brand-name">
+              <span class="gv-footer__brand-primary">GLOSS</span><span
+                class="gv-footer__brand-secondary">VAULT</span>
+            </span>
+
+            <span class="gv-footer__tagline">
+              PROTECT THE FINISH. PRESERVE THE GLOSS.
+            </span>
+          </span>
+
+        </a>
+
+        <p class="gv-footer__description">
+          Elevating automotive care through precision detailing,
+          advanced paint protection, and a relentless commitment
+          to a flawless finish.
+        </p>
+
+        <!-- SOCIAL ICONS -->
+<div class="footer-social">
+  <a href="#" aria-label="Instagram">
+    <i data-lucide="instagram"></i>
+  </a>
+
+  <a href="#" aria-label="Facebook">
+    <i data-lucide="facebook"></i>
+  </a>
+
+  <a href="#" aria-label="YouTube">
+    <i data-lucide="youtube"></i>
+  </a>
+
+  <a href="mailto:info@yourdomain.com" aria-label="Email">
+    <i data-lucide="mail"></i>
+  </a>
+</div>
+      </div>
+
+
+      <!-- QUICK LINKS -->
+      <div class="gv-footer__column">
+        <h3 class="gv-footer__heading">Quick Links</h3>
+
+        <ul class="gv-footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+
+      <!-- SERVICES -->
+      <div class="gv-footer__column">
+        <h3 class="gv-footer__heading">Our Services</h3>
+
+        <ul class="gv-footer__links">
+          <li><a href="services.html">Car Detailing</a></li>
+          <li><a href="services.html">Ceramic Coating</a></li>
+          <li><a href="services.html">Paint Correction</a></li>
+          <li><a href="services.html">Paint Protection Film</a></li>
+          <li><a href="services.html">Interior Detailing</a></li>
+        </ul>
+      </div>
+
+
+      <!-- CONTACT -->
+      <div class="gv-footer__column gv-footer__contact">
+        <h3 class="gv-footer__heading">Get In Touch</h3>
+
+        <p class="gv-footer__contact-intro">
+          Ready to restore your vehicle's brilliance?
+          Let's talk.
+        </p>
+
+        <a href="contact.html" class="gv-footer__contact-link">
+          <i data-lucide="map-pin"></i>
+          <span>Visit Our Studio</span>
+        </a>
+
+        <a href="tel:+910000000000" class="gv-footer__contact-link">
+          <i data-lucide="phone"></i>
+          <span>Contact Our Team</span>
+        </a>
+
+        <a href="mailto:info@yourdomain.com"
+           class="gv-footer__contact-link">
+          <i data-lucide="mail"></i>
+          <span>Send Us An Email</span>
+        </a>
+
+        <a href="contact.html" class="gv-footer__cta">
+          Book Your Detail
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- BOTTOM BAR -->
+  <div class="gv-footer__bottom">
+    <div class="gv-footer__bottom-container">
+
+      <p class="gv-footer__copyright">
+        © <span id="gv-footer-year"></span>
+        GLOSSVAULT. All rights reserved.
+      </p>
+
+      <div class="gv-footer__legal">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+      </div>
+
+      <a href="#top" class="gv-footer__back-top">
+        Back to Top
+        <i data-lucide="arrow-up"></i>
+      </a>
+
+    </div>
+  </div>
+</footer>
+
+
+
+
+<!-- MOBILE OVERLAY -->
+<div class="gv-overlay" id="gv-overlay"></div>
+
+
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script src="./index.js"></script>
+
+</body>
+</html>
+
+
+
