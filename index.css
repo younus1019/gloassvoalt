@@ -2802,3 +2802,255 @@ body.dark-mode .gv-final-cta {
     flex-basis: 24px;
   }
 }
+
+
+
+
+/* =========================================
+   GLOSSVAULT — RESPONSIVE HERO
+========================================= */
+
+.gv-hero {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: min(760px, calc(100svh - var(--header-height, 80px)));
+  padding: clamp(40px, 6vh, 80px) clamp(16px, 3vw, 48px);
+}
+
+.gv-hero *,
+.gv-hero *::before,
+.gv-hero *::after {
+  box-sizing: border-box;
+}
+
+.gv-hero__background {
+  background-position: center;
+  background-size: cover;
+}
+
+.gv-hero__container {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 0;
+}
+
+.gv-hero__content {
+  width: min(100%, 700px);
+  padding-left: clamp(0px, 4vw, 64px);
+}
+
+.gv-hero__title {
+  overflow-wrap: anywhere;
+  font-size: clamp(32px, 4.1vw, 68px);
+}
+
+.gv-hero__description {
+  width: 100%;
+  max-width: 550px;
+}
+
+.gv-hero__actions {
+  min-width: 0;
+}
+
+.gv-hero__button {
+  max-width: 100%;
+}
+
+.gv-hero__highlights {
+  gap: 16px;
+  margin-top: clamp(28px, 5vh, 54px);
+}
+
+.gv-hero__highlight {
+  min-width: 0;
+}
+
+/* Laptop screens */
+@media (min-width: 1025px) {
+  .gv-hero__content {
+    padding-left: clamp(40px, 5vw, 72px);
+  }
+}
+
+/* Tablet screens */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .gv-hero {
+    min-height: calc(100svh - var(--header-height, 80px));
+    padding: 56px 32px;
+  }
+
+  .gv-hero__container {
+    align-items: center;
+  }
+
+  .gv-hero__content {
+    max-width: 680px;
+    padding-left: 32px;
+  }
+
+  .gv-hero__title {
+    font-size: clamp(34px, 5.2vw, 52px);
+  }
+
+  .gv-hero__pagination {
+    left: 0;
+  }
+
+  .gv-hero__highlights {
+    gap: 14px;
+    margin-top: 32px;
+  }
+
+  .gv-hero__highlight {
+    padding-right: 12px;
+  }
+
+  .gv-hero__scroll {
+    right: 0;
+    bottom: -8px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 599px) {
+  .gv-hero {
+    min-height: calc(100svh - var(--header-height, 70px));
+    padding: 48px 20px 40px;
+  }
+
+  .gv-hero__container {
+    align-items: center;
+  }
+
+  .gv-hero__content {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .gv-hero__eyebrow {
+    gap: 10px;
+    margin-bottom: 18px;
+    font-size: 9px;
+    letter-spacing: 0.18em;
+  }
+
+  .gv-hero__eyebrow > span {
+    width: 26px;
+  }
+
+  .gv-hero__title {
+    font-size: clamp(30px, 8vw, 42px);
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+  .gv-hero__description {
+    margin: 16px 0 22px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .gv-hero__actions {
+    gap: 10px;
+  }
+
+  .gv-hero__button {
+    min-height: 48px;
+    padding: 0 16px;
+    gap: 10px;
+    font-size: 10px;
+  }
+
+  .gv-hero__highlights {
+    gap: 14px 12px;
+    margin-top: 30px;
+  }
+
+  .gv-hero__highlight {
+    flex: 1 1 calc(50% - 12px);
+    gap: 8px;
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .gv-hero__highlight-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .gv-hero__highlight-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .gv-hero__highlight-text {
+    gap: 3px;
+    font-size: 9px;
+  }
+
+  .gv-hero__pagination,
+  .gv-hero__scroll {
+    display: none;
+  }
+}
+
+/* Very small mobile screens */
+@media (max-width: 360px) {
+  .gv-hero {
+    padding-inline: 16px;
+  }
+
+  .gv-hero__title {
+    font-size: 29px;
+  }
+
+  .gv-hero__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .gv-hero__button {
+    width: 100%;
+  }
+
+  .gv-hero__highlights {
+    gap: 14px 8px;
+  }
+
+  .gv-hero__highlight {
+    flex-basis: 100%;
+  }
+}
+
+/* Short landscape screens */
+@media (max-height: 500px) and (orientation: landscape) {
+  .gv-hero {
+    min-height: auto;
+    padding-block: 32px;
+  }
+
+  .gv-hero__container {
+    min-height: 0;
+  }
+
+  .gv-hero__eyebrow {
+    margin-bottom: 12px;
+  }
+
+  .gv-hero__description {
+    margin-block: 12px 16px;
+  }
+
+  .gv-hero__highlights {
+    margin-top: 20px;
+  }
+
+  .gv-hero__pagination,
+  .gv-hero__scroll {
+    display: none;
+  }
+}
+
+

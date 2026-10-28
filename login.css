@@ -109,7 +109,7 @@ input:focus-visible {
 
   color: var(--text);
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid var(--secondary);
   border-radius: 50%;
 
   cursor: pointer;
@@ -892,7 +892,7 @@ body.dark-mode .login-separator > span {
 body.dark-mode .login-tools button {
   color: var(--text);
   background: var(--surface);
-  border-color: var(--border);
+  border-color: var(--secondary);
 }
 
 body.dark-mode .login-tools button:hover {

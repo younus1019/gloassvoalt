@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/png" href="images/cinematic logo.png" />
-
+    <link rel="icon" type="image/png" href="images/cinematic logo.png" />
 
     <title>GLOSSVAULT | Customer Portal</title>
 
@@ -17,7 +16,10 @@
     <!-- GLOSSVAULT typography: Cinzel headings + Montserrat body -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -89,14 +91,72 @@
         ========================== -->
 
       <nav class="sidebar-nav" aria-label="Customer dashboard navigation">
-<button class="nav-item active" data-panel="dashboard" data-title="Dashboard" type="button"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></button>
-<button class="nav-item" data-panel="booking" data-title="Book a Detailing Slot" type="button"><i data-lucide="calendar-plus"></i><span>Book a Detailing Slot</span></button>
-<button class="nav-item" data-panel="bookings" data-title="My Bookings" type="button"><i data-lucide="calendar-days"></i><span>My Bookings</span></button>
-<button class="nav-item" data-panel="tracking" data-title="Service Tracking" type="button"><i data-lucide="clipboard-check"></i><span>Service Tracking</span></button>
-<button class="nav-item" data-panel="loyalty" data-title="Loyalty & Rewards" type="button"><i data-lucide="award"></i><span>Loyalty & Rewards</span></button>
-<button class="nav-item" data-panel="vehicles" data-title="My Vehicles" type="button"><i data-lucide="car-front"></i><span>My Vehicles</span></button><div class="sidebar-nav-divider"></div>
-<button class="nav-item" data-panel="profile" data-title="My Profile" type="button"><i data-lucide="user-round"></i><span>My Profile</span></button>
-<button class="nav-item" data-panel="settings" data-title="Settings" type="button"><i data-lucide="settings"></i><span>Settings</span></button></nav>
+        <button
+          class="nav-item active"
+          data-panel="dashboard"
+          data-title="Dashboard"
+          type="button"
+        >
+          <i data-lucide="layout-dashboard"></i><span>Dashboard</span>
+        </button>
+        <button
+          class="nav-item"
+          data-panel="booking"
+          data-title="Book a Detailing Slot"
+          type="button"
+        >
+          <i data-lucide="calendar-plus"></i><span>Book a Detailing Slot</span>
+        </button>
+        <button
+          class="nav-item"
+          data-panel="bookings"
+          data-title="My Bookings"
+          type="button"
+        >
+          <i data-lucide="calendar-days"></i><span>My Bookings</span>
+        </button>
+        <button
+          class="nav-item"
+          data-panel="tracking"
+          data-title="Service Tracking"
+          type="button"
+        >
+          <i data-lucide="clipboard-check"></i><span>Service Tracking</span>
+        </button>
+        <button
+          class="nav-item"
+          data-panel="loyalty"
+          data-title="Loyalty & Rewards"
+          type="button"
+        >
+          <i data-lucide="award"></i><span>Loyalty & Rewards</span>
+        </button>
+        <button
+          class="nav-item"
+          data-panel="vehicles"
+          data-title="My Vehicles"
+          type="button"
+        >
+          <i data-lucide="car-front"></i><span>My Vehicles</span>
+        </button>
+        <div class="sidebar-nav-divider"></div>
+        <button
+          class="nav-item"
+          data-panel="profile"
+          data-title="My Profile"
+          type="button"
+        >
+          <i data-lucide="user-round"></i><span>My Profile</span>
+        </button>
+        <button
+          class="nav-item"
+          data-panel="settings"
+          data-title="Settings"
+          type="button"
+        >
+          <i data-lucide="settings"></i><span>Settings</span>
+        </button>
+      </nav>
 
       <!-- =========================
              SIDEBAR FOOTER
@@ -244,21 +304,539 @@
         ================================================== -->
 
       <div class="panels-container">
-<section class="dashboard-panel active" id="panel-dashboard">
-<div class="panel-header"><div><span class="panel-eyebrow">GLOSSVAULT CUSTOMER PORTAL</span><h2>Welcome back, Alex.</h2><p>Manage detailing appointments, track your service package and enjoy your loyalty rewards.</p></div><button class="primary-btn" data-open-panel="booking" type="button"><i data-lucide="calendar-plus"></i> Book a Detailing Slot</button></div>
-<section class="dashboard-welcome"><div class="welcome-content"><span class="welcome-label">PROTECT THE FINISH. PRESERVE THE GLOSS.</span><h3>Exceptional care for every mile.</h3><p>Your vehicle's next-level care starts here. This portal uses <strong>sample demo data</strong> stored in your browser.</p><div class="welcome-progress"><div class="progress-header"><span>Current Treatment Progress</span><strong id="heroProgressLabel">60%</strong></div><div class="progress-track"><div class="progress-fill" id="heroProgressFill" style="width:60%"></div></div></div></div><div class="welcome-icon"><i data-lucide="car-front"></i></div></section>
-<section class="dashboard-stats"><article class="dashboard-stat-card"><div class="stat-icon"><i data-lucide="calendar-check"></i></div><span class="stat-label">Upcoming Bookings</span><h3 id="statUpcoming">01</h3><p>Appointments scheduled</p></article><article class="dashboard-stat-card"><div class="stat-icon maintenance"><i data-lucide="sparkles"></i></div><span class="stat-label">Active Treatment</span><h3 id="statActive">01</h3><p>Service package in progress</p></article><article class="dashboard-stat-card"><div class="stat-icon warranty"><i data-lucide="check-circle"></i></div><span class="stat-label">Completed Services</span><h3 id="statCompleted">08</h3><p>Demo service history</p></article><article class="dashboard-stat-card"><div class="stat-icon invoice"><i data-lucide="award"></i></div><span class="stat-label">Loyalty Points</span><h3 id="statPoints">1,250</h3><p>Demo rewards balance</p></article></section>
-<section class="dashboard-content-grid"><article class="dashboard-card installation-overview"><div class="card-header"><div><span class="card-eyebrow">YOUR NEXT VISIT</span><h3>Upcoming Appointment</h3></div><button class="card-link" data-open-panel="bookings" type="button">View Bookings <i data-lucide="arrow-up-right"></i></button></div><div class="project-summary"><div class="project-product"><div class="product-icon"><i data-lucide="car-front"></i></div><div><strong id="nextServiceName">Ceramic Coating</strong><span id="nextVehicleName">Vehicle: Black luxury sedan</span></div></div><div class="detail-list"><div class="detail-row"><span>Date</span><strong id="nextBookingDate">28 Oct 2026</strong></div><div class="detail-row"><span>Time</span><strong id="nextBookingTime">10:30 AM</strong></div><div class="detail-row"><span>Status</span><strong><span class="table-status confirmed">Confirmed</span></strong></div></div></div></article><article class="dashboard-card quick-actions-card"><div class="card-header"><div><span class="card-eyebrow">QUICK ACCESS</span><h3>Quick Actions</h3></div></div><div class="quick-actions"><button data-open-panel="booking" type="button"><span class="quick-icon"><i data-lucide="calendar-plus"></i></span><span>Book a Detailing Slot</span></button><button data-open-panel="tracking" type="button"><span class="quick-icon"><i data-lucide="clipboard-check"></i></span><span>Track Service Progress</span></button><button data-open-panel="loyalty" type="button"><span class="quick-icon"><i data-lucide="award"></i></span><span>View Loyalty Rewards</span></button><button data-open-panel="vehicles" type="button"><span class="quick-icon"><i data-lucide="car-front"></i></span><span>Manage My Vehicles</span></button></div></article></section>
-<article class="dashboard-card activity-card"><div class="card-header"><div><span class="card-eyebrow">SERVICE JOURNEY</span><h3>Recent Activity</h3></div></div><div class="activity-list" id="activityList"><div class="activity-item"><div class="activity-icon completed"><i data-lucide="check"></i></div><div class="activity-content"><h4>Booking confirmed</h4><p>Your ceramic coating appointment is saved in this demo portal.</p><span>Today</span></div></div><div class="activity-item"><div class="activity-icon"><i data-lucide="sparkles"></i></div><div class="activity-content"><h4>Paint inspection completed</h4><p>Your vehicle is ready for its next treatment stage.</p><span>2 days ago</span></div></div></div></article></section>
-<section class="dashboard-panel" id="panel-booking"><div class="panel-header"><div><span class="panel-eyebrow">RESERVE YOUR VISIT</span><h2>Book a Detailing Slot</h2><p>Select a service, vehicle, date and preferred demo time.</p></div></div><section class="installation-grid"><article class="dashboard-card"><div class="card-header"><h3>Appointment Details</h3></div><form id="bookingForm" class="portal-form"><label for="bookingService">Choose a service</label><select id="bookingService" required><option>Interior Detailing</option><option>Exterior Detailing</option><option>Complete Detailing</option><option>Paint Correction</option><option>Ceramic Coating</option><option>Paint Protection Film (PPF)</option><option>Wheel & Tyre Care</option></select><label for="bookingVehicle">Your vehicle</label><select id="bookingVehicle" required><option>Black luxury sedan</option><option>White SUV</option></select><label for="bookingDate">Preferred date</label><input id="bookingDate" type="date" required><label for="bookingTime">Available demo slot</label><select id="bookingTime" required><option>09:00 AM</option><option>10:30 AM</option><option>12:00 PM</option><option>02:00 PM</option><option>04:00 PM</option></select><label for="bookingNotes">Special requests (optional)</label><textarea id="bookingNotes" rows="3" placeholder="Tell us about your vehicle or preferred treatment..."></textarea><button class="primary-btn" type="submit"><i data-lucide="calendar-check"></i> Confirm Demo Booking</button><p class="form-feedback" id="bookingFeedback" role="status"></p></form></article><article class="dashboard-card"><div class="card-header"><h3>Before You Book</h3></div><div class="detail-list"><div class="detail-row"><span>Appointment type</span><strong>In-studio detailing</strong></div><div class="detail-row"><span>Availability</span><strong>Sample schedule</strong></div><div class="detail-row"><span>Confirmation</span><strong>Saved in browser</strong></div></div><p class="panel-note">This is a frontend demonstration. No live calendar or real booking service is connected.</p></article></section></section>
-<section class="dashboard-panel" id="panel-bookings"><div class="panel-header"><div><span class="panel-eyebrow">APPOINTMENT HISTORY</span><h2>My Bookings</h2><p>Review upcoming appointments and previous services stored in this browser.</p></div><button class="primary-btn" data-open-panel="booking" type="button"><i data-lucide="calendar-plus"></i> New Booking</button></div><article class="dashboard-card"><div class="card-header"><h3>Appointments</h3><span class="status-badge confirmed-status">Demo records</span></div><div class="table-wrapper"><table class="dashboard-table"><thead><tr><th>Service</th><th>Vehicle</th><th>Date & Time</th><th>Status</th><th>Action</th></tr></thead><tbody id="bookingTableBody"></tbody></table></div><p class="panel-note">Cancelling a demo booking changes local browser data only.</p></article></section>
-<section class="dashboard-panel" id="panel-tracking"><div class="panel-header"><div><span class="panel-eyebrow">TREATMENT STATUS</span><h2>Service Tracking</h2><p>Follow your detailing package from booking to vehicle collection.</p></div><span class="status-badge progress-status">In Progress</span></div><article class="project-banner"><div><span>ACTIVE SERVICE PACKAGE</span><h3 id="trackingServiceName">Ceramic Coating Treatment</h3><p id="trackingVehicle">Black luxury sedan · Sample record</p></div><div class="project-progress-circle"><strong id="trackingProgress">60%</strong><span>Complete</span></div></article><section class="installation-grid"><article class="dashboard-card"><div class="card-header"><h3>Treatment Overview</h3></div><div class="detail-list"><div class="detail-row"><span>Service package</span><strong id="trackingPackage">Ceramic Coating</strong></div><div class="detail-row"><span>Current stage</span><strong>Surface preparation</strong></div><div class="detail-row"><span>Estimated duration</span><strong>1–2 days (example)</strong></div></div></article><article class="dashboard-card"><div class="card-header"><h3>Service Package Timeline</h3></div><div class="vertical-timeline"><div class="timeline-step completed"><span class="timeline-marker"><i data-lucide="check"></i></span><div><strong>Booking Confirmed</strong><span>Appointment recorded</span></div></div><div class="timeline-step completed"><span class="timeline-marker"><i data-lucide="check"></i></span><div><strong>Vehicle Received</strong><span>Check-in complete</span></div></div><div class="timeline-step current"><span class="timeline-marker"><i data-lucide="sparkles"></i></span><div><strong>Detailing in Progress</strong><span>Current demo stage</span></div></div><div class="timeline-step"><span class="timeline-marker">4</span><div><strong>Quality Check</strong><span>Upcoming</span></div></div><div class="timeline-step"><span class="timeline-marker">5</span><div><strong>Ready for Collection</strong><span>Upcoming</span></div></div></div></article></section><p class="panel-note">Status is illustrative and will not update from a real detailing studio.</p></section>
-<section class="dashboard-panel" id="panel-loyalty"><div class="panel-header"><div><span class="panel-eyebrow">REWARDS PROGRAMME</span><h2>Loyalty & Rewards</h2><p>Review your sample points balance and try a demo reward redemption.</p></div></div><article class="warranty-banner"><div class="warranty-banner-icon"><i data-lucide="award"></i></div><div><span>YOUR DEMO BALANCE</span><h3 id="loyaltyPointsLarge">1,250 Points</h3><p>Sample points only; no real rewards account is connected.</p></div><div class="warranty-date"><span>NEXT SAMPLE REWARD</span><strong>1,500 pts</strong></div></article><section class="warranty-grid"><article class="dashboard-card"><div class="card-header"><h3>Reward Progress</h3></div><div class="welcome-progress reward-progress"><div class="progress-header"><span>Progress to next reward</span><strong id="rewardProgressLabel">83%</strong></div><div class="progress-track"><div class="progress-fill" id="rewardProgressFill" style="width:83%"></div></div></div><button class="primary-btn" id="claimRewardBtn" type="button"><i data-lucide="gift"></i> Try Demo Reward</button><p class="form-feedback" id="rewardFeedback" role="status"></p></article><article class="dashboard-card"><div class="card-header"><h3>Ways to Earn</h3></div><div class="coverage-list"><div class="coverage-item"><div class="coverage-icon"><i data-lucide="car-front"></i></div><div><strong>Complete a detailing service</strong><span>Sample: earn 100 points</span></div></div><div class="coverage-item"><div class="coverage-icon"><i data-lucide="users"></i></div><div><strong>Refer a friend</strong><span>Reward rules are examples only</span></div></div></div></article></section><article class="dashboard-card"><div class="card-header"><h3>Points Activity</h3></div><div class="table-wrapper"><table class="dashboard-table"><thead><tr><th>Activity</th><th>Date</th><th>Points</th><th>Status</th></tr></thead><tbody id="pointsHistoryBody"></tbody></table></div></article></section>
-<section class="dashboard-panel" id="panel-vehicles"><div class="panel-header"><div><span class="panel-eyebrow">YOUR GARAGE</span><h2>My Vehicles</h2><p>Manage the demo vehicle details used when booking.</p></div><button class="primary-btn" id="addVehicleBtn" type="button"><i data-lucide="plus"></i> Add Vehicle</button></div><section class="installation-grid" id="vehicleCards"></section><p class="panel-note">Vehicle records are stored locally in this browser.</p></section>
-<section class="dashboard-panel" id="panel-profile"><div class="panel-header"><div><span class="panel-eyebrow">ACCOUNT DETAILS</span><h2>My Profile</h2><p>Update the customer details for this demo account.</p></div></div><article class="dashboard-card"><div class="card-header"><h3>Customer Information</h3></div><form id="profileForm" class="portal-form"><label for="profileName">Full name</label><input id="profileName" type="text" value="Alex Morgan" required><label for="profileEmail">Email address</label><input id="profileEmail" type="email" value="alex@example.com" required><label for="profilePhone">Phone number</label><input id="profilePhone" type="tel" value="+91 90000 00000"><label for="profilePreference">Preferred contact method</label><select id="profilePreference"><option>Email</option><option>Phone</option><option>WhatsApp</option></select><button class="primary-btn" type="submit"><i data-lucide="save"></i> Save Demo Profile</button><p class="form-feedback" id="profileFeedback" role="status"></p></form></article></section>
-<section class="dashboard-panel" id="panel-settings"><div class="panel-header"><div><span class="panel-eyebrow">PREFERENCES</span><h2>Settings</h2><p>Personalise the dashboard on this device.</p></div></div><section class="warranty-grid"><article class="dashboard-card"><div class="card-header"><h3>Appearance</h3></div><p>Switch between light and dark mode.</p><button class="secondary-btn" id="settingsThemeBtn" type="button"><i data-lucide="moon"></i> Toggle Theme</button></article><article class="dashboard-card"><div class="card-header"><h3>Demo Data</h3></div><p>Reset local bookings, vehicles, points and profile edits.</p><button class="secondary-btn" id="resetDemoBtn" type="button"><i data-lucide="rotate-ccw"></i> Reset Demo Data</button></article></section></section>
-</div>
-</main>
+        <section class="dashboard-panel active" id="panel-dashboard">
+          <div class="panel-header">
+            <div>
+              <span class="panel-eyebrow">GLOSSVAULT CUSTOMER PORTAL</span>
+              <h2>Welcome back, Alex.</h2>
+              <p>
+                Manage detailing appointments, track your service package and
+                enjoy your loyalty rewards.
+              </p>
+            </div>
+            <button class="primary-btn" data-open-panel="booking" type="button">
+              <i data-lucide="calendar-plus"></i> Book a Detailing Slot
+            </button>
+          </div>
+          <section class="dashboard-welcome">
+            <div class="welcome-content">
+              <span class="welcome-label"
+                >PROTECT THE FINISH. PRESERVE THE GLOSS.</span
+              >
+              <h3>Exceptional care for every mile.</h3>
+              <p>
+                Your vehicle's next-level care starts here. This portal uses
+                <strong>sample demo data</strong> stored in your browser.
+              </p>
+              <div class="welcome-progress">
+                <div class="progress-header">
+                  <span>Current Treatment Progress</span
+                  ><strong id="heroProgressLabel">60%</strong>
+                </div>
+                <div class="progress-track">
+                  <div
+                    class="progress-fill"
+                    id="heroProgressFill"
+                    style="width: 60%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="welcome-icon"><i data-lucide="car-front"></i></div>
+          </section>
+          <section class="dashboard-stats">
+            <article class="dashboard-stat-card">
+              <div class="stat-icon"><i data-lucide="calendar-check"></i></div>
+              <span class="stat-label">Upcoming Bookings</span>
+              <h3 id="statUpcoming">01</h3>
+              <p>Appointments scheduled</p>
+            </article>
+            <article class="dashboard-stat-card">
+              <div class="stat-icon maintenance">
+                <i data-lucide="sparkles"></i>
+              </div>
+              <span class="stat-label">Active Treatment</span>
+              <h3 id="statActive">01</h3>
+              <p>Service package in progress</p>
+            </article>
+            <article class="dashboard-stat-card">
+              <div class="stat-icon warranty">
+                <i data-lucide="check-circle"></i>
+              </div>
+              <span class="stat-label">Completed Services</span>
+              <h3 id="statCompleted">08</h3>
+              <p>Demo service history</p>
+            </article>
+            <article class="dashboard-stat-card">
+              <div class="stat-icon invoice"><i data-lucide="award"></i></div>
+              <span class="stat-label">Loyalty Points</span>
+              <h3 id="statPoints">1,250</h3>
+              <p>Demo rewards balance</p>
+            </article>
+          </section>
+          <section class="dashboard-content-grid">
+            <article class="dashboard-card installation-overview">
+              <div class="card-header">
+                <div>
+                  <span class="card-eyebrow">YOUR NEXT VISIT</span>
+                  <h3>Upcoming Appointment</h3>
+                </div>
+                <button
+                  class="card-link"
+                  data-open-panel="bookings"
+                  type="button"
+                >
+                  View Bookings <i data-lucide="arrow-up-right"></i>
+                </button>
+              </div>
+              <div class="project-summary">
+                <div class="project-product">
+                  <div class="product-icon">
+                    <i data-lucide="car-front"></i>
+                  </div>
+                  <div>
+                    <strong id="nextServiceName">Ceramic Coating</strong
+                    ><span id="nextVehicleName"
+                      >Vehicle: Black luxury sedan</span
+                    >
+                  </div>
+                </div>
+                <div class="detail-list">
+                  <div class="detail-row">
+                    <span>Date</span
+                    ><strong id="nextBookingDate">28 Oct 2026</strong>
+                  </div>
+                  <div class="detail-row">
+                    <span>Time</span
+                    ><strong id="nextBookingTime">10:30 AM</strong>
+                  </div>
+                  <div class="detail-row">
+                    <span>Status</span
+                    ><strong
+                      ><span class="table-status confirmed"
+                        >Confirmed</span
+                      ></strong
+                    >
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="dashboard-card quick-actions-card">
+              <div class="card-header">
+                <div>
+                  <span class="card-eyebrow">QUICK ACCESS</span>
+                  <h3>Quick Actions</h3>
+                </div>
+              </div>
+              <div class="quick-actions">
+                <button data-open-panel="booking" type="button">
+                  <span class="quick-icon"
+                    ><i data-lucide="calendar-plus"></i></span
+                  ><span>Book a Detailing Slot</span></button
+                ><button data-open-panel="tracking" type="button">
+                  <span class="quick-icon"
+                    ><i data-lucide="clipboard-check"></i></span
+                  ><span>Track Service Progress</span></button
+                ><button data-open-panel="loyalty" type="button">
+                  <span class="quick-icon"><i data-lucide="award"></i></span
+                  ><span>View Loyalty Rewards</span></button
+                ><button data-open-panel="vehicles" type="button">
+                  <span class="quick-icon"><i data-lucide="car-front"></i></span
+                  ><span>Manage My Vehicles</span>
+                </button>
+              </div>
+            </article>
+          </section>
+          <article class="dashboard-card activity-card">
+            <div class="card-header">
+              <div>
+                <span class="card-eyebrow">SERVICE JOURNEY</span>
+                <h3>Recent Activity</h3>
+              </div>
+            </div>
+            <div class="activity-list" id="activityList">
+              <div class="activity-item">
+                <div class="activity-icon completed">
+                  <i data-lucide="check"></i>
+                </div>
+                <div class="activity-content">
+                  <h4>Booking confirmed</h4>
+                  <p>
+                    Your ceramic coating appointment is saved in this demo
+                    portal.
+                  </p>
+                  <span>Today</span>
+                </div>
+              </div>
+              <div class="activity-item">
+                <div class="activity-icon"><i data-lucide="sparkles"></i></div>
+                <div class="activity-content">
+                  <h4>Paint inspection completed</h4>
+                  <p>Your vehicle is ready for its next treatment stage.</p>
+                  <span>2 days ago</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="dashboard-panel" id="panel-booking">
+          <div class="panel-header">
+            <div>
+              <span class="panel-eyebrow">RESERVE YOUR VISIT</span>
+              <h2>Book a Detailing Slot</h2>
+              <p>Select a service, vehicle, date and preferred demo time.</p>
+            </div>
+          </div>
+          <section class="installation-grid">
+            <article class="dashboard-card">
+              <div class="card-header"><h3>Appointment Details</h3></div>
+              <form id="bookingForm" class="portal-form">
+                <label for="bookingService">Choose a service</label
+                ><select id="bookingService" required>
+                  <option>Interior Detailing</option>
+                  <option>Exterior Detailing</option>
+                  <option>Complete Detailing</option>
+                  <option>Paint Correction</option>
+                  <option>Ceramic Coating</option>
+                  <option>Paint Protection Film (PPF)</option>
+                  <option>Wheel & Tyre Care</option></select
+                ><label for="bookingVehicle">Your vehicle</label
+                ><select id="bookingVehicle" required>
+                  <option>Black luxury sedan</option>
+                  <option>White SUV</option></select
+                ><label for="bookingDate">Preferred date</label
+                ><input id="bookingDate" type="date" required /><label
+                  for="bookingTime"
+                  >Available demo slot</label
+                ><select id="bookingTime" required>
+                  <option>09:00 AM</option>
+                  <option>10:30 AM</option>
+                  <option>12:00 PM</option>
+                  <option>02:00 PM</option>
+                  <option>04:00 PM</option></select
+                ><label for="bookingNotes">Special requests (optional)</label
+                ><textarea
+                  id="bookingNotes"
+                  rows="3"
+                  placeholder="Tell us about your vehicle or preferred treatment..."
+                ></textarea
+                ><button class="primary-btn" type="submit">
+                  <i data-lucide="calendar-check"></i> Confirm Demo Booking
+                </button>
+                <p class="form-feedback" id="bookingFeedback" role="status"></p>
+              </form>
+            </article>
+            <article class="dashboard-card">
+              <div class="card-header"><h3>Before You Book</h3></div>
+              <div class="detail-list">
+                <div class="detail-row">
+                  <span>Appointment type</span
+                  ><strong>In-studio detailing</strong>
+                </div>
+                <div class="detail-row">
+                  <span>Availability</span><strong>Sample schedule</strong>
+                </div>
+                <div class="detail-row">
+                  <span>Confirmation</span><strong>Saved in browser</strong>
+                </div>
+              </div>
+              <p class="panel-note">
+                This is a frontend demonstration. No live calendar or real
+                booking service is connected.
+              </p>
+            </article>
+          </section>
+        </section>
+        <section class="dashboard-panel" id="panel-bookings">
+          <div class="panel-header">
+            <div>
+              <span class="panel-eyebrow">APPOINTMENT HISTORY</span>
+              <h2>My Bookings</h2>
+              <p>
+                Review upcoming appointments and previous services stored in
+                this browser.
+              </p>
+            </div>
+            <button class="primary-btn" data-open-panel="booking" type="button">
+              <i data-lucide="calendar-plus"></i> New Booking
+            </button>
+          </div>
+          <article class="dashboard-card">
+            <div class="card-header">
+              <h3>Appointments</h3>
+              <span class="status-badge confirmed-status">records</span>
+            </div>
+            <div class="table-wrapper">
+              <table class="dashboard-table">
+                <thead>
+                  <tr>
+                    <th>Service</th>
+                    <th>Vehicle</th>
+                    <th>Date & Time</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="bookingTableBody"></tbody>
+              </table>
+            </div>
+            <p class="panel-note">
+              Cancelling a  booking changes local browser data only.
+            </p>
+          </article>
+        </section>
+        <section class="dashboard-panel" id="panel-tracking">
+          <div class="panel-header">
+            <div>
+              <span class="panel-eyebrow">TREATMENT STATUS</span>
+              <h2>Service Tracking</h2>
+              <p>
+                Follow your detailing package from booking to vehicle
+                collection.
+              </p>
+            </div>
+            <span class="status-badge progress-status">In Progress</span>
+          </div>
+          <article class="project-banner">
+            <div>
+              <span>ACTIVE SERVICE PACKAGE</span>
+              <h3 id="trackingServiceName">Ceramic Coating Treatment</h3>
+              <p id="trackingVehicle">Black luxury sedan · Sample record</p>
+            </div>
+            <div class="project-progress-circle">
+              <strong id="trackingProgress">60%</strong><span>Complete</span>
+            </div>
+          </article>
+          <section class="installation-grid">
+            <article class="dashboard-card">
+              <div class="card-header"><h3>Treatment Overview</h3></div>
+              <div class="detail-list">
+                <div class="detail-row">
+                  <span>Service package</span
+                  ><strong id="trackingPackage">Ceramic Coating</strong>
+                </div>
+                <div class="detail-row">
+                  <span>Current stage</span><strong>Surface preparation</strong>
+                </div>
+                <div class="detail-row">
+                  <span>Estimated duration</span
+                  ><strong>1–2 days (example)</strong>
+                </div>
+              </div>
+            </article>
+            <article class="dashboard-card">
+              <div class="card-header"><h3>Service Package Timeline</h3></div>
+              <div class="vertical-timeline">
+                <div class="timeline-step completed">
+                  <span class="timeline-marker"
+                    ><i data-lucide="check"></i
+                  ></span>
+                  <div>
+                    <strong>Booking Confirmed</strong
+                    ><span>Appointment recorded</span>
+                  </div>
+                </div>
+                <div class="timeline-step completed">
+                  <span class="timeline-marker"
+                    ><i data-lucide="check"></i
+                  ></span>
+                  <div>
+                    <strong>Vehicle Received</strong
+                    ><span>Check-in complete</span>
+                  </div>
+                </div>
+                <div class="timeline-step current">
+                  <span class="timeline-marker"
+                    ><i data-lucide="sparkles"></i
+                  ></span>
+                  <div>
+                    <strong>Detailing in Progress</strong
+                    ><span>Current demo stage</span>
+                  </div>
+                </div>
+                <div class="timeline-step">
+                  <span class="timeline-marker">4</span>
+                  <div><strong>Quality Check</strong><span>Upcoming</span></div>
+                </div>
+                <div class="timeline-step">
+                  <span class="timeline-marker">5</span>
+                  <div>
+                    <strong>Ready for Collection</strong><span>Upcoming</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <p class="panel-note">
+            Status is illustrative and will not update from a real detailing
+            studio.
+          </p>
+        </section>
+        <section class="dashboard-panel" id="panel-loyalty">
+          <div class="panel-header">
+            <div>
+              <span class="panel-eyebrow">REWARDS PROGRAMME</span>
+              <h2>Loyalty & Rewards</h2>
+              <p>
+                Review your sample points balance and try a  reward
+                redemption.
+              </p>
+            </div>
+          </div>
+          <article class="warranty-banner">
+            <div class="warranty-banner-icon"><i data-lucide="award"></i></div>
+            <div>
+              <span>YOUR  BALANCE</span>
+              <h3 id="loyaltyPointsLarge">1,250 Points</h3>
+              <p>Sample points only; no real rewards account is connected.</p>
+            </div>
+            <div class="warranty-date">
+              <span>NEXT SAMPLE REWARD</span><strong>1,500 pts</strong>
+            </div>
+          </article>
+          <section class="warranty-grid">
+            <article class="dashboard-card">
+              <div class="card-header"><h3>Reward Progress</h3></div>
+              <div class="welcome-progress reward-progress">
+                <div class="progress-header">
+                  <span>Progress to next reward</span
+                  ><strong id="rewardProgressLabel">83%</strong>
+                </div>
+                <div class="progress-track">
+                  <div
+                    class="progress-fill"
+                    id="rewardProgressFill"
+                    style="width: 83%"
+                  ></div>
+                </div>
+              </div>
+              <button class="primary-btn" id="claimRewardBtn" type="button">
+                <i data-lucide="gift"></i> Try  Reward
+              </button>
+              <p class="form-feedback" id="rewardFeedback" role="status"></p>
+            </article>
+            <article class="dashboard-card">
+              <div class="card-header"><h3>Ways to Earn</h3></div>
+              <div class="coverage-list">
+                <div class="coverage-item">
+                  <div class="coverage-icon">
+                    <i data-lucide="car-front"></i>
+                  </div>
+                  <div>
+                    <strong>Complete a detailing service</strong
+                    ><span>Sample: earn 100 points</span>
+                  </div>
+                </div>
+                <div class="coverage-item">
+                  <div class="coverage-icon"><i data-lucide="users"></i></div>
+                  <div>
+                    <strong>Refer a friend</strong
+                    ><span>Reward rules are examples only</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <article class="dashboard-card">
+            <div class="card-header"><h3>Points Activity</h3></div>
+            <div class="table-wrapper">
+              <table class="dashboard-table">
+                <thead>
+                  <tr>
+                    <th>Activity</th>
+                    <th>Date</th>
+                    <th>Points</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="pointsHistoryBody"></tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+        <section class="dashboard-panel" id="panel-vehicles">
+          <div class="panel-header">
+            <div>
+              <span class="panel-eyebrow">YOUR GARAGE</span>
+              <h2>My Vehicles</h2>
+              <p>Manage the  vehicle details used when booking.</p>
+            </div>
+            <button class="primary-btn" id="addVehicleBtn" type="button">
+              <i data-lucide="plus"></i> Add Vehicle
+            </button>
+          </div>
+          <section class="installation-grid" id="vehicleCards"></section>
+          <p class="panel-note">
+            Vehicle records are stored locally in this browser.
+          </p>
+        </section>
+        <section class="dashboard-panel" id="panel-profile">
+          <div class="panel-header">
+            <div>
+              <span class="panel-eyebrow">ACCOUNT DETAILS</span>
+              <h2>My Profile</h2>
+              <p>Update the customer details for this  account.</p>
+            </div>
+          </div>
+          <article class="dashboard-card">
+            <div class="card-header"><h3>Customer Information</h3></div>
+            <form id="profileForm" class="portal-form">
+              <label for="profileName">Full name</label
+              ><input
+                id="profileName"
+                type="text"
+                value="Alex Morgan"
+                required
+              /><label for="profileEmail">Email address</label
+              ><input
+                id="profileEmail"
+                type="email"
+                value="alex@example.com"
+                required
+              /><label for="profilePhone">Phone number</label
+              ><input
+                id="profilePhone"
+                type="tel"
+                value="+91 90000 00000"
+              /><label for="profilePreference">Preferred contact method</label
+              ><select id="profilePreference">
+                <option>Email</option>
+                <option>Phone</option>
+                <option>WhatsApp</option></select
+              ><button class="primary-btn" type="submit">
+                <i data-lucide="save"></i> Save  Profile
+              </button>
+              <p class="form-feedback" id="profileFeedback" role="status"></p>
+            </form>
+          </article>
+        </section>
+        <section class="dashboard-panel" id="panel-settings">
+          <div class="panel-header">
+            <div>
+              <span class="panel-eyebrow">PREFERENCES</span>
+              <h2>Settings</h2>
+              <p>Personalise the dashboard on this device.</p>
+            </div>
+          </div>
+          <section class="warranty-grid">
+            <article class="dashboard-card">
+              <div class="card-header"><h3>Appearance</h3></div>
+              <p>Switch between light and dark mode.</p>
+              <button class="secondary-btn" id="settingsThemeBtn" type="button">
+                <i data-lucide="moon"></i> Toggle Theme
+              </button>
+            </article>
+            <article class="dashboard-card">
+              <div class="card-header"><h3> Data</h3></div>
+              <p>Reset local bookings, vehicles, points and profile edits.</p>
+              <button class="secondary-btn" id="resetDemoBtn" type="button">
+                <i data-lucide="rotate-ccw"></i> Reset  Data
+              </button>
+            </article>
+          </section>
+        </section>
+      </div>
+    </main>
 
     <!-- Dashboard JS -->
 

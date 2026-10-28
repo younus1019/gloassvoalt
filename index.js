@@ -184,14 +184,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ACTIVE NAVIGATION AND FOOTER LINKS */
 
-  const currentPage =
-    window.location.pathname.split("/").filter(Boolean).pop() || "index.html";
+  function getPageName(url) {
+    try {
+      const parsedURL = new URL(url, window.location.href);
+      const pathname = parsedURL.pathname;
+      const filename = pathname.split("/").filter(Boolean).pop();
 
-  const pageLinks = document.querySelectorAll(
-    "#gv-navigation a[href], .gv-footer a[href]",
-  );
+      return filename ? filename.toLowerCase() : "index.html";
+    } catch {
+      return "";
+    }
+  }
 
-  pageLinks.forEach((link) => {
+  const currentPage = getPageName(window.location.href);
+
+  function isSamePage(link) {
     const href = link.getAttribute("href");
 
     if (
@@ -201,34 +208,54 @@ document.addEventListener("DOMContentLoaded", () => {
       href.startsWith("tel:") ||
       href.startsWith("javascript:")
     ) {
-      return;
+      return false;
     }
 
-    let linkPage;
+    return getPageName(href) === currentPage;
+  }
 
-    try {
-      const linkURL = new URL(href, window.location.href);
-      linkPage =
-        linkURL.pathname.split("/").filter(Boolean).pop() || "index.html";
-    } catch {
-      return;
-    }
+  function setActiveState(link, isActive) {
+    link.classList.toggle("is-active", isActive);
 
-    const isCurrentPage = linkPage === currentPage;
-
-    link.classList.toggle("is-active", isCurrentPage);
-
-    if (isCurrentPage) {
+    if (isActive) {
       link.setAttribute("aria-current", "page");
     } else {
       link.removeAttribute("aria-current");
     }
+  }
+
+  const pageLinks = document.querySelectorAll(
+    "#gv-navigation a[href], .gv-footer a[href]",
+  );
+
+  pageLinks.forEach((link) => {
+    setActiveState(link, isSamePage(link));
   });
+
+  const homePages = ["index.html", "index2.html"];
+  const isHomePage = homePages.includes(currentPage);
+
+  if (dropdownTrigger) {
+    setActiveState(dropdownTrigger, isHomePage);
+  }
+
+  if (homeDropdown) {
+    homeDropdown.classList.toggle("is-current", isHomePage);
+  }
+
+  document
+    .querySelectorAll("#gv-navigation .gv-dropdown__link")
+    .forEach((link) => {
+      setActiveState(link, isSamePage(link));
+    });
 
   /* CLOSE MENU AFTER NAVIGATION */
 
   navigation?.querySelectorAll("a[href]").forEach((link) => {
-    link.addEventListener("click", closeMenu);
+    link.addEventListener("click", () => {
+      closeMenu();
+      closeDropdown();
+    });
   });
 
   /* KEYBOARD ACCESSIBILITY */

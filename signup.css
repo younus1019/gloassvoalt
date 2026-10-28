@@ -95,7 +95,7 @@ input:focus-visible {
   padding: 0;
   color: var(--su-text);
   background: var(--su-surface);
-  border: 1px solid var(--su-border);
+  border: 1px solid var(--su-red);
   border-radius: 50%;
   cursor: pointer;
   transition: all var(--su-transition);
@@ -669,7 +669,7 @@ body.dark-mode .signup-input-wrapper input::placeholder {
 body.dark-mode .signup-tools button {
   color: var(--su-text);
   background: var(--su-surface);
-  border-color: var(--su-border);
+  border-color: var(--su-red);
 }
 
 body.dark-mode .signup-tools button:hover {

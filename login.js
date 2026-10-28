@@ -12,8 +12,8 @@ const loginMessage = document.getElementById("loginMessage");
 const themeButton = document.getElementById("loginThemeToggle");
 const rtlButton = document.getElementById("loginRtlToggle");
 
-const THEME_KEY = "gvPortalTheme";
-const DIRECTION_KEY = "gvPortalDir";
+const THEME_KEY = "gv-theme";
+const DIRECTION_KEY = "gv-direction";
 
 // =========================================
 // SAFE STORAGE HELPERS
@@ -36,11 +36,11 @@ function savePreference(key, value) {
 }
 
 // =========================================
-// REFRESH LUCIDE ICONS
+// LUCIDE ICONS
 // =========================================
 
 function refreshIcons() {
-  if (window.lucide) {
+  if (window.lucide && typeof window.lucide.createIcons === "function") {
     window.lucide.createIcons();
   }
 }
@@ -55,7 +55,6 @@ function applyTheme(theme) {
   document.body.classList.toggle("dark-mode", isDark);
 
   if (themeButton) {
-    // Keep the button icon-only to prevent wrapping.
     themeButton.innerHTML = isDark
       ? '<i data-lucide="sun"></i>'
       : '<i data-lucide="moon"></i>';
@@ -66,8 +65,6 @@ function applyTheme(theme) {
     );
 
     themeButton.setAttribute("aria-pressed", String(isDark));
-
-    // Do not set a title: native tooltips can wrap below the icon.
     themeButton.removeAttribute("title");
   }
 
@@ -75,8 +72,9 @@ function applyTheme(theme) {
 }
 
 themeButton?.addEventListener("click", () => {
-  const isDark = document.body.classList.contains("dark-mode");
-  const nextTheme = isDark ? "light" : "dark";
+  const nextTheme = document.body.classList.contains("dark-mode")
+    ? "light"
+    : "dark";
 
   savePreference(THEME_KEY, nextTheme);
   applyTheme(nextTheme);
@@ -92,7 +90,6 @@ function applyDirection(direction) {
   document.documentElement.dir = nextDirection;
 
   if (rtlButton) {
-    // Keep the button icon-only to prevent wrapping.
     rtlButton.innerHTML = '<i data-lucide="arrow-left-right"></i>';
 
     rtlButton.setAttribute(
@@ -115,6 +112,20 @@ rtlButton?.addEventListener("click", () => {
 
   savePreference(DIRECTION_KEY, nextDirection);
   applyDirection(nextDirection);
+});
+
+// =========================================
+// CROSS-TAB PREFERENCE SYNCHRONIZATION
+// =========================================
+
+window.addEventListener("storage", (event) => {
+  if (event.key === THEME_KEY) {
+    applyTheme(event.newValue === "dark" ? "dark" : "light");
+  }
+
+  if (event.key === DIRECTION_KEY) {
+    applyDirection(event.newValue === "rtl" ? "rtl" : "ltr");
+  }
 });
 
 // =========================================
@@ -171,3 +182,4 @@ loginForm?.addEventListener("submit", (event) => {
 applyTheme(getPreference(THEME_KEY, "light"));
 applyDirection(getPreference(DIRECTION_KEY, "ltr"));
 setPasswordVisibility(false);
+refreshIcons();

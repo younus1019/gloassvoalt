@@ -13,8 +13,8 @@ const signupRtlButton = document.getElementById("signupRtlToggle");
 const signupPassword = document.getElementById("signupPassword");
 const confirmPassword = document.getElementById("confirmPassword");
 
-const SIGNUP_THEME_KEY = "gvPortalTheme";
-const SIGNUP_DIRECTION_KEY = "gvPortalDir";
+const SIGNUP_THEME_KEY = "gv-theme";
+const SIGNUP_DIRECTION_KEY = "gv-direction";
 
 // =========================================
 // SAFE STORAGE
@@ -32,23 +32,22 @@ function saveSignupPreference(key, value) {
   try {
     localStorage.setItem(key, value);
   } catch {
-    // Continue without persistent storage.
+    // Continue if browser storage is unavailable.
   }
 }
 
 // =========================================
-// ICONS
+// LUCIDE ICONS
 // =========================================
 
 function refreshSignupIcons() {
-  if (window.lucide) {
+  if (window.lucide && typeof window.lucide.createIcons === "function") {
     window.lucide.createIcons();
   }
 }
 
 // =========================================
 // DARK MODE
-// Shared preference with the login page
 // =========================================
 
 function applySignupTheme(theme) {
@@ -74,16 +73,16 @@ function applySignupTheme(theme) {
 }
 
 signupThemeButton?.addEventListener("click", () => {
-  const isDark = document.body.classList.contains("dark-mode");
-  const nextTheme = isDark ? "light" : "dark";
+  const nextTheme = document.body.classList.contains("dark-mode")
+    ? "light"
+    : "dark";
 
   saveSignupPreference(SIGNUP_THEME_KEY, nextTheme);
   applySignupTheme(nextTheme);
 });
 
 // =========================================
-// RTL / LTR
-// Shared preference with the login page
+// RTL / LTR DIRECTION
 // =========================================
 
 function applySignupDirection(direction) {
@@ -120,6 +119,20 @@ signupRtlButton?.addEventListener("click", () => {
 });
 
 // =========================================
+// SYNCHRONIZE OTHER OPEN TABS
+// =========================================
+
+window.addEventListener("storage", (event) => {
+  if (event.key === SIGNUP_THEME_KEY) {
+    applySignupTheme(event.newValue === "dark" ? "dark" : "light");
+  }
+
+  if (event.key === SIGNUP_DIRECTION_KEY) {
+    applySignupDirection(event.newValue === "rtl" ? "rtl" : "ltr");
+  }
+});
+
+// =========================================
 // SHOW / HIDE PASSWORDS
 // =========================================
 
@@ -153,23 +166,18 @@ document.querySelectorAll(".signup-password-toggle").forEach((button) => {
 // PASSWORD CONFIRMATION
 // =========================================
 
-confirmPassword?.addEventListener("input", () => {
-  if (confirmPassword.value && signupPassword.value !== confirmPassword.value) {
-    confirmPassword.setCustomValidity("Passwords do not match.");
-  } else {
-    confirmPassword.setCustomValidity("");
-  }
-});
-
-signupPassword?.addEventListener("input", () => {
-  if (!confirmPassword) return;
+function validateSignupPasswords() {
+  if (!signupPassword || !confirmPassword) return;
 
   if (confirmPassword.value && signupPassword.value !== confirmPassword.value) {
     confirmPassword.setCustomValidity("Passwords do not match.");
   } else {
     confirmPassword.setCustomValidity("");
   }
-});
+}
+
+confirmPassword?.addEventListener("input", validateSignupPasswords);
+signupPassword?.addEventListener("input", validateSignupPasswords);
 
 // =========================================
 // SIGNUP FORM — FRONTEND DEMO ONLY
@@ -183,13 +191,17 @@ signupForm?.addEventListener("submit", (event) => {
     return;
   }
 
-  if (signupPassword.value !== confirmPassword.value) {
+  if (
+    signupPassword &&
+    confirmPassword &&
+    signupPassword.value !== confirmPassword.value
+  ) {
     confirmPassword.setCustomValidity("Passwords do not match.");
     confirmPassword.reportValidity();
     return;
   }
 
-  confirmPassword.setCustomValidity("");
+  confirmPassword?.setCustomValidity("");
 
   if (signupMessage) {
     signupMessage.textContent =
@@ -198,9 +210,11 @@ signupForm?.addEventListener("submit", (event) => {
 });
 
 // =========================================
-// INITIALIZE
+// INITIALIZE PREFERENCES
 // =========================================
 
 applySignupTheme(readSignupPreference(SIGNUP_THEME_KEY, "light"));
+
 applySignupDirection(readSignupPreference(SIGNUP_DIRECTION_KEY, "ltr"));
+
 refreshSignupIcons();

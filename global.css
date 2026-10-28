@@ -365,6 +365,7 @@ body.dark-mode .gv-brand__tagline {
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  
   gap: 12px;
   min-width: 0;
 }
@@ -374,11 +375,12 @@ body.dark-mode .gv-brand__tagline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+ 
   flex-shrink: 0;
   width: 40px;
   height: 40px;
   padding: 0;
-  border: 1px solid var(--gv-header-border);
+  border: 1px solid var(--gv-crimson);
   border-radius: 50%;
   background: transparent;
   color: var(--gv-header-text);
@@ -1651,4 +1653,19 @@ html[dir="rtl"] .gv-nav__dropdown-trigger::after {
 /* =========================================================
    END OF GLOBAL HEADER AND FOOTER STYLES
 ========================================================= */
+
+
+
+.gv-nav__dropdown-trigger.is-active {
+  color: var(--gv-crimson);
+}
+
+.gv-nav__dropdown-trigger.is-active::after {
+  transform: scaleX(1);
+}
+
+.gv-dropdown__link.is-active {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--gv-crimson);
+}
 
