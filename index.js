@@ -1,15 +1,6 @@
 "use strict";
 
-/* =========================================
-   GLOSSVAULT — GLOBAL INTERACTIONS
-   Graphite Gray + Crimson Red
-========================================= */
-
 document.addEventListener("DOMContentLoaded", () => {
-  /* =========================================
-     ELEMENTS
-  ========================================= */
-
   const body = document.body;
   const html = document.documentElement;
 
@@ -20,21 +11,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const homeDropdown = document.querySelector(".gv-nav__item--dropdown");
   const dropdownTrigger = document.querySelector(".gv-nav__dropdown-trigger");
 
-  const themeButtons = [
-    document.getElementById("gv-theme-toggle"),
-    document.getElementById("gv-theme-toggle-mobile"),
-  ].filter(Boolean);
+  const themeButton = document.getElementById("gv-theme-toggle");
+  const rtlButton = document.getElementById("gv-rtl-toggle");
 
-  const rtlButtons = [
-    document.getElementById("gv-rtl-toggle"),
-    document.getElementById("gv-rtl-toggle-mobile"),
-  ].filter(Boolean);
+  const desktopMediaQuery = window.matchMedia(
+    "(min-width: 1025px), (width: 1024px) and (height: 600px)",
+  );
 
-  const desktopMediaQuery = window.matchMedia("(min-width: 768px)");
-
-  /* =========================================
-     STORAGE HELPERS
-  ========================================= */
+  /* STORAGE */
 
   function readPreference(key, fallback) {
     try {
@@ -48,80 +32,68 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       localStorage.setItem(key, value);
     } catch {
-      // The page remains usable without localStorage.
+      // Continue if browser storage is unavailable.
     }
   }
 
-  /* =========================================
-     LUCIDE ICONS
-  ========================================= */
+  /* LUCIDE ICONS */
 
   function refreshIcons() {
-    if (window.lucide) {
+    if (window.lucide && typeof window.lucide.createIcons === "function") {
       window.lucide.createIcons();
     }
   }
 
-  /* =========================================
-     DARK MODE
-  ========================================= */
+  /* DARK MODE */
 
-  function updateThemeButtons() {
+  function updateThemeButton() {
+    if (!themeButton) return;
+
     const isDark = body.classList.contains("dark-mode");
 
-    themeButtons.forEach((button) => {
-      button.innerHTML = isDark
-        ? '<i data-lucide="sun"></i>'
-        : '<i data-lucide="moon"></i>';
+    themeButton.innerHTML = isDark
+      ? '<i data-lucide="sun"></i>'
+      : '<i data-lucide="moon"></i>';
 
-      button.setAttribute(
-        "aria-label",
-        isDark ? "Switch to light mode" : "Switch to dark mode",
-      );
+    themeButton.setAttribute(
+      "aria-label",
+      isDark ? "Switch to light mode" : "Switch to dark mode",
+    );
 
-      button.setAttribute("aria-pressed", String(isDark));
-      button.removeAttribute("title");
-    });
+    themeButton.setAttribute("aria-pressed", String(isDark));
 
     refreshIcons();
   }
 
   function setTheme(isDark) {
     body.classList.toggle("dark-mode", isDark);
-
     savePreference("gv-theme", isDark ? "dark" : "light");
-
-    updateThemeButtons();
+    updateThemeButton();
   }
 
   setTheme(readPreference("gv-theme", "light") === "dark");
 
-  themeButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      setTheme(!body.classList.contains("dark-mode"));
-    });
+  themeButton?.addEventListener("click", () => {
+    setTheme(!body.classList.contains("dark-mode"));
   });
 
-  /* =========================================
-     RTL / LTR DIRECTION
-  ========================================= */
+  /* RTL / LTR */
 
-  function updateRTLButtons() {
+  function updateRTLButton() {
+    if (!rtlButton) return;
+
     const isRTL = html.getAttribute("dir") === "rtl";
 
-    rtlButtons.forEach((button) => {
-      button.innerHTML = '<i data-lucide="arrow-left-right"></i>';
+    rtlButton.innerHTML = '<i data-lucide="arrow-left-right"></i>';
 
-      button.setAttribute(
-        "aria-label",
-        isRTL
-          ? "Switch to left-to-right layout"
-          : "Switch to right-to-left layout",
-      );
+    rtlButton.setAttribute(
+      "aria-label",
+      isRTL
+        ? "Switch to left-to-right layout"
+        : "Switch to right-to-left layout",
+    );
 
-      button.setAttribute("aria-pressed", String(isRTL));
-      button.removeAttribute("title");
-    });
+    rtlButton.setAttribute("aria-pressed", String(isRTL));
 
     refreshIcons();
   }
@@ -131,20 +103,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     savePreference("gv-direction", enabled ? "rtl" : "ltr");
 
-    updateRTLButtons();
+    updateRTLButton();
   }
 
   setRTL(readPreference("gv-direction", "ltr") === "rtl");
 
-  rtlButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      setRTL(html.getAttribute("dir") !== "rtl");
-    });
+  rtlButton?.addEventListener("click", () => {
+    setRTL(html.getAttribute("dir") !== "rtl");
   });
 
-  /* =========================================
-     MOBILE NAVIGATION
-  ========================================= */
+  /* MOBILE / TABLET NAVIGATION */
 
   function openMenu() {
     if (!menuToggle || !navigation || !overlay) return;
@@ -161,15 +129,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function closeMenu() {
-    if (!menuToggle || !navigation || !overlay) return;
-
-    navigation.classList.remove("is-open");
-    overlay.classList.remove("is-visible");
+    navigation?.classList.remove("is-open");
+    overlay?.classList.remove("is-visible");
     body.classList.remove("gv-menu-open");
 
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Open navigation menu");
-    menuToggle.innerHTML = '<i data-lucide="menu"></i>';
+    if (menuToggle) {
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation menu");
+      menuToggle.innerHTML = '<i data-lucide="menu"></i>';
+    }
 
     refreshIcons();
   }
@@ -179,15 +147,17 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.setAttribute("aria-expanded", "false");
 
     menuToggle.addEventListener("click", () => {
-      navigation.classList.contains("is-open") ? closeMenu() : openMenu();
+      if (navigation.classList.contains("is-open")) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
 
     overlay.addEventListener("click", closeMenu);
   }
 
-  /* =========================================
-     HOME DROPDOWN
-  ========================================= */
+  /* HOME DROPDOWN */
 
   function closeDropdown() {
     homeDropdown?.classList.remove("is-open");
@@ -212,17 +182,56 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* =========================================
-     CLOSE MENU AFTER NAVIGATION
-  ========================================= */
+  /* ACTIVE NAVIGATION AND FOOTER LINKS */
 
-  navigation?.querySelectorAll("a").forEach((link) => {
+  const currentPage =
+    window.location.pathname.split("/").filter(Boolean).pop() || "index.html";
+
+  const pageLinks = document.querySelectorAll(
+    "#gv-navigation a[href], .gv-footer a[href]",
+  );
+
+  pageLinks.forEach((link) => {
+    const href = link.getAttribute("href");
+
+    if (
+      !href ||
+      href.startsWith("#") ||
+      href.startsWith("mailto:") ||
+      href.startsWith("tel:") ||
+      href.startsWith("javascript:")
+    ) {
+      return;
+    }
+
+    let linkPage;
+
+    try {
+      const linkURL = new URL(href, window.location.href);
+      linkPage =
+        linkURL.pathname.split("/").filter(Boolean).pop() || "index.html";
+    } catch {
+      return;
+    }
+
+    const isCurrentPage = linkPage === currentPage;
+
+    link.classList.toggle("is-active", isCurrentPage);
+
+    if (isCurrentPage) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+
+  /* CLOSE MENU AFTER NAVIGATION */
+
+  navigation?.querySelectorAll("a[href]").forEach((link) => {
     link.addEventListener("click", closeMenu);
   });
 
-  /* =========================================
-     KEYBOARD SUPPORT
-  ========================================= */
+  /* KEYBOARD ACCESSIBILITY */
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
@@ -231,13 +240,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  /* =========================================
-     RESPONSIVE NAVIGATION
-  ========================================= */
+  /* RESPONSIVE NAVIGATION */
 
   function handleBreakpointChange(event) {
     if (event.matches) {
       closeMenu();
+      closeDropdown();
     }
   }
 
@@ -247,9 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
     desktopMediaQuery.addListener(handleBreakpointChange);
   }
 
-  /* =========================================
-     FOOTER YEAR
-  ========================================= */
+  /* FOOTER COPYRIGHT YEAR */
 
   const footerYear = document.getElementById("gv-footer-year");
 
@@ -257,9 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
     footerYear.textContent = new Date().getFullYear();
   }
 
-  /* =========================================
-     INITIALIZE ALL PAGE ICONS
-  ========================================= */
+  /* INITIALIZE ALL PAGE ICONS */
 
   refreshIcons();
 });

@@ -6,6 +6,7 @@
 
   <meta name="theme-color" content="#0B0B0D">
   <title>Gallery</title>
+   <link rel="icon" type="image/png" href="images/cinematic logo.png" />
 
   <!-- Global and Header Styles -->
   <link rel="stylesheet" href="./main.css">
@@ -22,7 +23,6 @@
 <header class="gv-header">
   <div class="gv-header__container">
 
-    <!-- BRAND LOGO -->
     <a href="index.html" class="gv-brand" aria-label="GLOSSVAULT Home">
       <img
         src="./images/cinematic logo.png"
@@ -41,24 +41,9 @@
       </span>
     </a>
 
-    <!-- MOBILE MENU BUTTON -->
-    <button
-      class="gv-menu-toggle"
-      id="gv-menu-toggle"
-      type="button"
-      aria-label="Open navigation menu"
-      aria-controls="gv-navigation"
-      aria-expanded="false"
-    >
-      <i data-lucide="menu"></i>
-    </button>
-
-    <!-- NAVIGATION -->
     <nav class="gv-nav" id="gv-navigation" aria-label="Main navigation">
-
       <ul class="gv-nav__list">
 
-        <!-- HOME DROPDOWN -->
         <li class="gv-nav__item gv-nav__item--dropdown">
           <button
             class="gv-nav__dropdown-trigger"
@@ -101,40 +86,14 @@
 
       </ul>
 
-      <!-- MOBILE ACTIONS -->
       <div class="gv-nav__mobile-controls">
-
-        <button
-          class="gv-icon-button"
-          id="gv-rtl-toggle-mobile"
-          type="button"
-          aria-label="Switch to right-to-left layout"
-          title="Switch to RTL"
-          aria-pressed="false"
-        >
-          <i data-lucide="languages"></i>
-        </button>
-
-        <button
-          class="gv-icon-button"
-          id="gv-theme-toggle-mobile"
-          type="button"
-          aria-label="Switch to dark mode"
-          title="Dark mode"
-          aria-pressed="false"
-        >
-          <i data-lucide="moon"></i>
-        </button>
-
         <a href="login.html" class="gv-login gv-nav__mobile-login">
           <i data-lucide="user-round"></i>
           <span>Login</span>
         </a>
-
       </div>
     </nav>
 
-    <!-- DESKTOP ACTIONS -->
     <div class="gv-header__actions">
 
       <button
@@ -164,8 +123,22 @@
         <span>Login</span>
       </a>
 
+      <button
+        class="gv-menu-toggle"
+        id="gv-menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="gv-navigation"
+        aria-expanded="false"
+      >
+        <i data-lucide="menu"></i>
+      </button>
+
     </div>
+
   </div>
+
+  <div class="gv-overlay" id="gv-overlay"></div>
 </header>
 
 
@@ -201,7 +174,7 @@
     </div>
 
     <div class="gv-gallery-hero__signature">
-      <span>01 / THE COLLECTION</span>
+      <span> THE COLLECTION</span>
       <span>PROTECT THE FINISH. PRESERVE THE GLOSS.</span>
     </div>
   </div>
@@ -215,7 +188,7 @@
     <div class="gv-gallery-featured__heading">
       <p class="gv-gallery-featured__eyebrow">
         <span></span>
-        SELECTED WORK / 01
+        SELECTED WORK 
       </p>
 
       <h2>
@@ -228,7 +201,7 @@
 
       <figure class="gv-gallery-featured__visual">
         <img
-          src="./images/gallery-featured.jpg"
+          src="./images/vault 3.jpg"
           alt="Luxury vehicle with a refined, mirror-like paint finish"
           loading="lazy"
         />
@@ -309,7 +282,7 @@
 
       <figure class="gv-gallery-item gv-gallery-item--large"
               data-category="exterior">
-        <img src="./images/gallery-exterior-01.jpg"
+        <img src="./images/gallery 1.jpg"
              alt="Glossy luxury vehicle exterior after detailing"
              loading="lazy">
         <figcaption>
@@ -320,7 +293,7 @@
 
       <figure class="gv-gallery-item"
               data-category="correction">
-        <img src="./images/gallery-correction-01.jpg"
+        <img src="./images/gallery 2.jpg"
              alt="Close-up of refined automotive paintwork"
              loading="lazy">
         <figcaption>
@@ -331,7 +304,7 @@
 
       <figure class="gv-gallery-item"
               data-category="interior">
-        <img src="./images/gallery-interior-01.jpg"
+        <img src="./images/service img 5.jfif"
              alt="Premium vehicle interior with clean leather surfaces"
              loading="lazy">
         <figcaption>
@@ -342,7 +315,7 @@
 
       <figure class="gv-gallery-item"
               data-category="protection">
-        <img src="./images/gallery-protection-01.jpg"
+        <img src="./images/vault 2.jpg"
              alt="Professional paint protection treatment on a vehicle"
              loading="lazy">
         <figcaption>
@@ -353,7 +326,7 @@
 
       <figure class="gv-gallery-item gv-gallery-item--wide"
               data-category="exterior">
-        <img src="./images/gallery-exterior-02.jpg"
+        <img src="./images/vault 4.jfif"
              alt="Luxury car showcasing a deep, polished paint finish"
              loading="lazy">
         <figcaption>
@@ -364,7 +337,7 @@
 
       <figure class="gv-gallery-item"
               data-category="protection">
-        <img src="./images/gallery-protection-02.jpg"
+        <img src="./images/gloss 2.jfif"
              alt="Close-up of a vehicle receiving paint protection"
              loading="lazy">
         <figcaption>
@@ -559,20 +532,17 @@
         </p>
 
         <!-- SOCIAL ICONS -->
-<div class="footer-social">
-  <a href="#" aria-label="Instagram">
+<div class="gv-footer__socials">
+  <a href="#" class="gv-footer__social" aria-label="Instagram">
     <i data-lucide="instagram"></i>
   </a>
-
-  <a href="#" aria-label="Facebook">
+  <a href="#" class="gv-footer__social" aria-label="Facebook">
     <i data-lucide="facebook"></i>
   </a>
-
-  <a href="#" aria-label="YouTube">
+  <a href="#" class="gv-footer__social" aria-label="YouTube">
     <i data-lucide="youtube"></i>
   </a>
-
-  <a href="mailto:info@yourdomain.com" aria-label="Email">
+  <a href="mailto:info@yourdomain.com" class="gv-footer__social" aria-label="Email">
     <i data-lucide="mail"></i>
   </a>
 </div>
@@ -673,7 +643,7 @@
 
 
 
-<script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
 
 <script src="./index.js"></script>
 <script src="./gallery.js"></script>

@@ -378,8 +378,8 @@ input:focus-visible {
 
 .brand img {
   display: block;
-  width: 42px;
-  height: 42px;
+  width: 55px;
+  height: 55px;
   flex: 0 0 42px;
   object-fit: contain;
 }
@@ -413,8 +413,25 @@ input:focus-visible {
   text-align: center;
 }
 
+.brand,
+.brand:visited,
+.brand:hover,
+.brand:active {
+  color: var(--text) !important;
+  text-decoration: none !important;
+}
+
+.brand .brand-name {
+  color: var(--text) !important;
+  transition: none;
+}
+
 .brand:hover .brand-name {
-  color: var(--secondary);
+  color: var(--text) !important;
+}
+
+.brand .brand-accent {
+  color: var(--secondary) !important;
 }
 
 /* =========================================

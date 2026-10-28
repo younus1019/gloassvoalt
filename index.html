@@ -6,6 +6,7 @@
 
   <meta name="theme-color" content="#0B0B0D">
   <title>GLOSSVAULT | Premium Car Detailing</title>
+   <link rel="icon" type="image/png" href="images/cinematic logo.png" />
 
   <!-- Global and Header Styles -->
   <link rel="stylesheet" href="./main.css">
@@ -22,7 +23,6 @@
 <header class="gv-header">
   <div class="gv-header__container">
 
-    <!-- BRAND LOGO -->
     <a href="index.html" class="gv-brand" aria-label="GLOSSVAULT Home">
       <img
         src="./images/cinematic logo.png"
@@ -41,24 +41,9 @@
       </span>
     </a>
 
-    <!-- MOBILE MENU BUTTON -->
-    <button
-      class="gv-menu-toggle"
-      id="gv-menu-toggle"
-      type="button"
-      aria-label="Open navigation menu"
-      aria-controls="gv-navigation"
-      aria-expanded="false"
-    >
-      <i data-lucide="menu"></i>
-    </button>
-
-    <!-- NAVIGATION -->
     <nav class="gv-nav" id="gv-navigation" aria-label="Main navigation">
-
       <ul class="gv-nav__list">
 
-        <!-- HOME DROPDOWN -->
         <li class="gv-nav__item gv-nav__item--dropdown">
           <button
             class="gv-nav__dropdown-trigger"
@@ -101,42 +86,14 @@
 
       </ul>
 
-      <!-- MOBILE ACTIONS -->
       <div class="gv-nav__mobile-controls">
-
-      
-<button
-  class="gv-icon-button"
-  id="gv-rtl-toggle-mobile"
-  type="button"
-  aria-label="Switch to right-to-left layout"
-  title="Switch to RTL"
-  aria-pressed="false"
->
-  <i data-lucide="arrow-left-right"></i>
-</button>
-
-
-        <button
-          class="gv-icon-button"
-          id="gv-theme-toggle-mobile"
-          type="button"
-          aria-label="Switch to dark mode"
-          title="Dark mode"
-          aria-pressed="false"
-        >
-          <i data-lucide="moon"></i>
-        </button>
-
         <a href="login.html" class="gv-login gv-nav__mobile-login">
           <i data-lucide="user-round"></i>
           <span>Login</span>
         </a>
-
       </div>
     </nav>
 
-    <!-- DESKTOP ACTIONS -->
     <div class="gv-header__actions">
 
       <button
@@ -166,11 +123,23 @@
         <span>Login</span>
       </a>
 
+      <button
+        class="gv-menu-toggle"
+        id="gv-menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="gv-navigation"
+        aria-expanded="false"
+      >
+        <i data-lucide="menu"></i>
+      </button>
+
     </div>
+
   </div>
+
+  <div class="gv-overlay" id="gv-overlay"></div>
 </header>
-
-
 
 <!-- =========================================
      GLOSSVAULT — HOME 1 HERO
@@ -183,7 +152,7 @@
   <div class="gv-hero__container">
 
     <!-- SLIDE INDICATOR -->
-    <div class="gv-hero__pagination" aria-label="Hero slides">
+    <!-- <div class="gv-hero__pagination" aria-label="Hero slides">
       <span class="gv-hero__pagination-line"></span>
       <a href="#home" class="gv-hero__pagination-number is-active"
          aria-label="Slide 1">01</a>
@@ -192,7 +161,7 @@
       <a href="#home" class="gv-hero__pagination-number"
          aria-label="Slide 3">03</a>
       <span class="gv-hero__pagination-line"></span>
-    </div>
+    </div> -->
 
     <!-- HERO CONTENT -->
     <div class="gv-hero__content">
@@ -263,12 +232,12 @@
     </div>
 
     <!-- SCROLL INDICATOR -->
-    <a href="#trust-highlights" class="gv-hero__scroll">
+    <!-- <a href="#trust-highlights" class="gv-hero__scroll">
       <span class="gv-hero__scroll-mouse">
         <span></span>
       </span>
       <span>SCROLL DOWN</span>
-    </a>
+    </a> -->
 
   </div>
 </section>
@@ -282,7 +251,12 @@
   <div class="gv-trust__container">
 
     <div class="gv-trust__intro">
-      <span class="gv-trust__eyebrow">THE GLOSSVAULT STANDARD</span>
+     
+<span class="gv-trust__eyebrow">
+  <span></span>
+  THE GLOSSVAULT STANDARD
+</span>
+
       <h2>More Than a Shine. <span>A Standard of Excellence.</span></h2>
     </div>
 
@@ -372,7 +346,12 @@
     <div class="gv-about__content">
 
       <div class="gv-section-header gv-about__header">
-        <span class="gv-section-eyebrow">THE STORY BEHIND THE SHINE</span>
+  
+<span class="gv-section-eyebrow">
+  <span></span>
+  THE STORY BEHIND THE SHINE
+</span>
+
 
         <h2 class="gv-section-title">
           A Passion for Perfection.
@@ -441,7 +420,12 @@
 
     <!-- SECTION HEADING -->
     <div class="gv-section-header gv-services__header">
-      <span class="gv-section-eyebrow">PRECISION IN EVERY DETAIL</span>
+     
+<span class="gv-section-eyebrow">
+  <span></span>
+  PRECISION IN EVERY DETAIL
+</span>
+
 
       <h2 class="gv-section-title">
         Exceptional Care.
@@ -520,7 +504,7 @@
         <a href="services.html" class="gv-service-card__image-link"
            aria-label="Explore paint correction">
           <img
-            src="./images/service img 3.jfif"
+            src="./images/service img 4.jfif"
             alt="Detailer correcting paintwork with a polishing machine"
             loading="lazy"
           />
@@ -655,7 +639,12 @@
 
     <!-- SECTION HEADING -->
     <div class="gv-section-header gv-transformation__header">
-      <span class="gv-section-eyebrow">THE ART OF TRANSFORMATION</span>
+      
+<span class="gv-section-eyebrow">
+  <span></span>
+  THE ART OF TRANSFORMATION
+</span>
+
 
       <h2 class="gv-section-title">
         Witness the Difference.
@@ -739,7 +728,12 @@
   <div class="gv-process__container">
 
     <div class="gv-section-header gv-process__header">
-      <span class="gv-section-eyebrow">A REFINED APPROACH</span>
+    
+<span class="gv-section-eyebrow">
+  <span></span>
+  A REFINED APPROACH
+</span>
+
       <h2 class="gv-section-title">
         Precision at Every Step. <span>Perfection in Every Detail.</span>
       </h2>
@@ -852,7 +846,12 @@
   <div class="gv-featured__container">
 
     <div class="gv-section-header gv-featured__header">
-      <span class="gv-section-eyebrow">RESULTS THAT SPEAK</span>
+      
+<span class="gv-section-eyebrow">
+  <span></span>
+  RESULTS THAT SPEAK
+</span>
+
       <h2 class="gv-section-title">
         The Craft Behind <span>Every Finish.</span>
       </h2>
@@ -995,9 +994,12 @@
   <div class="gv-final-cta__card">
 
     <div class="gv-final-cta__content">
-      <span class="gv-final-cta__eyebrow">
-        YOUR CAR DESERVES BETTER
-      </span>
+    
+<span class="gv-final-cta__eyebrow">
+  <span></span>
+  YOUR CAR DESERVES BETTER
+</span>
+
 
       <h2 class="gv-final-cta__title">
         Ready to Make Your
@@ -1183,8 +1185,7 @@
 <div class="gv-overlay" id="gv-overlay"></div>
 
 
-
-<script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
 
 <script src="./index.js"></script>
 

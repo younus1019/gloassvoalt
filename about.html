@@ -6,6 +6,7 @@
 
   <meta name="theme-color" content="#0B0B0D">
   <title>About us</title>
+   <link rel="icon" type="image/png" href="images/cinematic logo.png" />
 
   <!-- Global and Header Styles -->
   <link rel="stylesheet" href="./main.css">
@@ -22,7 +23,6 @@
 <header class="gv-header">
   <div class="gv-header__container">
 
-    <!-- BRAND LOGO -->
     <a href="index.html" class="gv-brand" aria-label="GLOSSVAULT Home">
       <img
         src="./images/cinematic logo.png"
@@ -41,24 +41,9 @@
       </span>
     </a>
 
-    <!-- MOBILE MENU BUTTON -->
-    <button
-      class="gv-menu-toggle"
-      id="gv-menu-toggle"
-      type="button"
-      aria-label="Open navigation menu"
-      aria-controls="gv-navigation"
-      aria-expanded="false"
-    >
-      <i data-lucide="menu"></i>
-    </button>
-
-    <!-- NAVIGATION -->
     <nav class="gv-nav" id="gv-navigation" aria-label="Main navigation">
-
       <ul class="gv-nav__list">
 
-        <!-- HOME DROPDOWN -->
         <li class="gv-nav__item gv-nav__item--dropdown">
           <button
             class="gv-nav__dropdown-trigger"
@@ -101,40 +86,14 @@
 
       </ul>
 
-      <!-- MOBILE ACTIONS -->
       <div class="gv-nav__mobile-controls">
-
-        <button
-          class="gv-icon-button"
-          id="gv-rtl-toggle-mobile"
-          type="button"
-          aria-label="Switch to right-to-left layout"
-          title="Switch to RTL"
-          aria-pressed="false"
-        >
-          <i data-lucide="languages"></i>
-        </button>
-
-        <button
-          class="gv-icon-button"
-          id="gv-theme-toggle-mobile"
-          type="button"
-          aria-label="Switch to dark mode"
-          title="Dark mode"
-          aria-pressed="false"
-        >
-          <i data-lucide="moon"></i>
-        </button>
-
         <a href="login.html" class="gv-login gv-nav__mobile-login">
           <i data-lucide="user-round"></i>
           <span>Login</span>
         </a>
-
       </div>
     </nav>
 
-    <!-- DESKTOP ACTIONS -->
     <div class="gv-header__actions">
 
       <button
@@ -164,8 +123,22 @@
         <span>Login</span>
       </a>
 
+      <button
+        class="gv-menu-toggle"
+        id="gv-menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="gv-navigation"
+        aria-expanded="false"
+      >
+        <i data-lucide="menu"></i>
+      </button>
+
     </div>
+
   </div>
+
+  <div class="gv-overlay" id="gv-overlay"></div>
 </header>
 
 
@@ -255,7 +228,7 @@
 
     <div class="gv-about-philosophy__top">
       <span class="gv-section-eyebrow">
-        OUR PHILOSOPHY / 02
+        OUR PHILOSOPHY 
       </span>
       <span class="gv-about-philosophy__top-note">
         CARE IS IN THE DETAILS.
@@ -371,7 +344,7 @@
     <div class="gv-about-approach__header">
       <div>
         <span class="gv-section-eyebrow">
-          OUR APPROACH / 03
+          OUR APPROACH 
         </span>
         <h2>
           Care, with a<br>
@@ -504,7 +477,7 @@
   <div class="gv-container">
 
     <div class="gv-about-manifesto__heading">
-      <span class="gv-section-eyebrow">04 / WHAT DEFINES US</span>
+      <span class="gv-section-eyebrow"> WHAT DEFINES US</span>
       <span class="gv-about-manifesto__edition">THE GLOSSVAULT STANDARD</span>
     </div>
 
@@ -596,7 +569,7 @@
       <div class="gv-about-cta__accent"></div>
 
       <div class="gv-about-cta__top">
-        <span class="gv-section-eyebrow">THE NEXT STEP / 05</span>
+        <span class="gv-section-eyebrow">THE NEXT STEP </span>
         <span class="gv-about-cta__label">LET'S TALK ABOUT YOUR VEHICLE</span>
       </div>
 
@@ -683,20 +656,17 @@
         </p>
 
         <!-- SOCIAL ICONS -->
-<div class="footer-social">
-  <a href="#" aria-label="Instagram">
+<div class="gv-footer__socials">
+  <a href="#" class="gv-footer__social" aria-label="Instagram">
     <i data-lucide="instagram"></i>
   </a>
-
-  <a href="#" aria-label="Facebook">
+  <a href="#" class="gv-footer__social" aria-label="Facebook">
     <i data-lucide="facebook"></i>
   </a>
-
-  <a href="#" aria-label="YouTube">
+  <a href="#" class="gv-footer__social" aria-label="YouTube">
     <i data-lucide="youtube"></i>
   </a>
-
-  <a href="mailto:info@yourdomain.com" aria-label="Email">
+  <a href="mailto:info@yourdomain.com" class="gv-footer__social" aria-label="Email">
     <i data-lucide="mail"></i>
   </a>
 </div>
@@ -797,7 +767,7 @@
 
 
 
-<script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
 
 <script src="./index.js"></script>
 

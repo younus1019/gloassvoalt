@@ -6,6 +6,7 @@
 
   <meta name="theme-color" content="#0B0B0D">
   <title>Services</title>
+   <link rel="icon" type="image/png" href="images/cinematic logo.png" />
 
   <!-- Global and Header Styles -->
   <link rel="stylesheet" href="./main.css">
@@ -22,7 +23,6 @@
 <header class="gv-header">
   <div class="gv-header__container">
 
-    <!-- BRAND LOGO -->
     <a href="index.html" class="gv-brand" aria-label="GLOSSVAULT Home">
       <img
         src="./images/cinematic logo.png"
@@ -41,24 +41,9 @@
       </span>
     </a>
 
-    <!-- MOBILE MENU BUTTON -->
-    <button
-      class="gv-menu-toggle"
-      id="gv-menu-toggle"
-      type="button"
-      aria-label="Open navigation menu"
-      aria-controls="gv-navigation"
-      aria-expanded="false"
-    >
-      <i data-lucide="menu"></i>
-    </button>
-
-    <!-- NAVIGATION -->
     <nav class="gv-nav" id="gv-navigation" aria-label="Main navigation">
-
       <ul class="gv-nav__list">
 
-        <!-- HOME DROPDOWN -->
         <li class="gv-nav__item gv-nav__item--dropdown">
           <button
             class="gv-nav__dropdown-trigger"
@@ -101,40 +86,14 @@
 
       </ul>
 
-      <!-- MOBILE ACTIONS -->
       <div class="gv-nav__mobile-controls">
-
-        <button
-          class="gv-icon-button"
-          id="gv-rtl-toggle-mobile"
-          type="button"
-          aria-label="Switch to right-to-left layout"
-          title="Switch to RTL"
-          aria-pressed="false"
-        >
-          <i data-lucide="languages"></i>
-        </button>
-
-        <button
-          class="gv-icon-button"
-          id="gv-theme-toggle-mobile"
-          type="button"
-          aria-label="Switch to dark mode"
-          title="Dark mode"
-          aria-pressed="false"
-        >
-          <i data-lucide="moon"></i>
-        </button>
-
         <a href="login.html" class="gv-login gv-nav__mobile-login">
           <i data-lucide="user-round"></i>
           <span>Login</span>
         </a>
-
       </div>
     </nav>
 
-    <!-- DESKTOP ACTIONS -->
     <div class="gv-header__actions">
 
       <button
@@ -164,8 +123,22 @@
         <span>Login</span>
       </a>
 
+      <button
+        class="gv-menu-toggle"
+        id="gv-menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-controls="gv-navigation"
+        aria-expanded="false"
+      >
+        <i data-lucide="menu"></i>
+      </button>
+
     </div>
+
   </div>
+
+  <div class="gv-overlay" id="gv-overlay"></div>
 </header>
 
 
@@ -269,7 +242,7 @@
           aria-label="Explore exterior detailing"
         >
           <img
-            src="./images/services-exterior-detailing.jpg"
+            src="./images/exterior clean.jfif"
             alt="Professional detailer refining the exterior of a luxury car"
             loading="lazy"
           >
@@ -286,7 +259,7 @@
             Restore a clean, refined appearance with careful washing,
             surface cleansing, and a meticulous finishing touch.
           </p>
-          <a class="gv-service-card__link" href="#interior-exterior-care">
+          <a class="gv-service-card__link" href="service-details.html">
             Explore service
             <i data-lucide="arrow-right" aria-hidden="true"></i>
           </a>
@@ -297,11 +270,11 @@
       <article class="gv-service-card">
         <a
           class="gv-service-card__image"
-          href="#interior-exterior-care"
+          href="service-details.html"
           aria-label="Explore interior detailing"
         >
           <img
-            src="./images/services-interior-detailing.jpg"
+            src="./images/service img 1.jfif"
             alt="Luxury vehicle interior with carefully detailed leather seats"
             loading="lazy"
           >
@@ -318,7 +291,7 @@
             Refresh upholstery, carpets, leather, and high-touch surfaces
             for a cleaner, more comfortable cabin.
           </p>
-          <a class="gv-service-card__link" href="#interior-exterior-care">
+          <a class="gv-service-card__link" href="service-details.html">
             Explore service
             <i data-lucide="arrow-right" aria-hidden="true"></i>
           </a>
@@ -329,11 +302,11 @@
       <article class="gv-service-card">
         <a
           class="gv-service-card__image"
-          href="#paint-correction"
+          href="service-details.html"
           aria-label="Explore paint correction"
         >
           <img
-            src="./images/services-paint-correction.jpg"
+            src="./images/service img 2.jfif"
             alt="Machine polishing the paintwork of a black luxury vehicle"
             loading="lazy"
           >
@@ -350,7 +323,7 @@
             Reduce suitable paint imperfections and refine surface clarity
             for a deeper, more consistent gloss.
           </p>
-          <a class="gv-service-card__link" href="#paint-correction">
+          <a class="gv-service-card__link" href="service-details.html">
             Explore service
             <i data-lucide="arrow-right" aria-hidden="true"></i>
           </a>
@@ -361,11 +334,11 @@
       <article class="gv-service-card">
         <a
           class="gv-service-card__image"
-          href="#advanced-protection"
+          href="service-details.html"
           aria-label="Explore ceramic coating"
         >
           <img
-            src="./images/services-ceramic-coating.jpg"
+            src="./images/service 7.png"
             alt="Applying a ceramic coating to a polished vehicle panel"
             loading="lazy"
           >
@@ -382,7 +355,7 @@
             Add a durable protective layer that supports gloss, water
             repellency, and easier routine maintenance.
           </p>
-          <a class="gv-service-card__link" href="#advanced-protection">
+          <a class="gv-service-card__link" href="service-details.html">
             Explore service
             <i data-lucide="arrow-right" aria-hidden="true"></i>
           </a>
@@ -393,11 +366,11 @@
       <article class="gv-service-card">
         <a
           class="gv-service-card__image"
-          href="#advanced-protection"
+          href="service-details.html"
           aria-label="Explore paint protection film"
         >
           <img
-            src="./images/services-ppf.jpg"
+            src="./images/service img 4.jfif"
             alt="Technician precisely applying transparent paint protection film"
             loading="lazy"
           >
@@ -414,7 +387,7 @@
             Help shield vulnerable painted surfaces from everyday road
             debris, light abrasions, and wear.
           </p>
-          <a class="gv-service-card__link" href="#advanced-protection">
+          <a class="gv-service-card__link" href="service-details.html">
             Explore service
             <i data-lucide="arrow-right" aria-hidden="true"></i>
           </a>
@@ -429,7 +402,7 @@
           aria-label="Explore headlight restoration"
         >
           <img
-            src="./images/services-headlight-restoration.jpg"
+            src="./images/headlight.png"
             alt="Restored clear headlight on a modern luxury vehicle"
             loading="lazy"
           >
@@ -462,7 +435,7 @@
     aria-label="Explore engine bay detailing"
   >
     <img
-      src="./images/services-engine-bay.jpg"
+      src="./images/engine clean.jfif"
       alt="Professionally cleaned engine bay in a luxury vehicle"
       loading="lazy"
     >
@@ -494,7 +467,7 @@
     aria-label="Explore wheel and tyre detailing"
   >
     <img
-      src="./images/services-wheel-tyre.jpg"
+      src="./images/gloss 6.jfif"
       alt="Detailed luxury alloy wheel with a clean tyre finish"
       loading="lazy"
     >
@@ -562,7 +535,7 @@
       <article class="gv-care-panel gv-care-panel--exterior">
         <div class="gv-care-panel__image">
           <img
-            src="./images/services-exterior-care.jpg"
+            src="./images/exterior clean.jfif"
             alt="Detailer carefully refining the exterior finish of a luxury car"
             loading="lazy"
           >
@@ -598,7 +571,7 @@
       <article class="gv-care-panel gv-care-panel--interior">
         <div class="gv-care-panel__image">
           <img
-            src="./images/services-interior-care.jpg"
+            src="./images/vault 1.jpg"
             alt="Premium vehicle cabin with carefully maintained leather upholstery"
             loading="lazy"
           >
@@ -672,7 +645,7 @@
     <!-- Wide cinematic banner -->
     <div class="gv-protection-banner">
       <img
-        src="./images/services-protection-banner.jpg"
+        src="./images/about hero img (3).png"
         alt="Glossy luxury vehicle under specialist detailing studio lights"
         loading="lazy"
       >
@@ -792,7 +765,7 @@
 
       <div class="gv-paint-comparison__image">
         <img
-          src="./images/services-paint-before.jpg"
+          src="./images/gloss 11.png"
           alt="Vehicle paintwork before professional paint correction"
           loading="lazy"
         >
@@ -814,7 +787,7 @@
 
       <div class="gv-paint-comparison__image">
         <img
-          src="./images/services-paint-after.jpg"
+          src="./images/Glossy Black  img.png"
           alt="Vehicle paintwork after professional paint correction"
           loading="lazy"
         >
@@ -968,20 +941,17 @@
         </p>
 
         <!-- SOCIAL ICONS -->
-<div class="footer-social">
-  <a href="#" aria-label="Instagram">
+<div class="gv-footer__socials">
+  <a href="#" class="gv-footer__social" aria-label="Instagram">
     <i data-lucide="instagram"></i>
   </a>
-
-  <a href="#" aria-label="Facebook">
+  <a href="#" class="gv-footer__social" aria-label="Facebook">
     <i data-lucide="facebook"></i>
   </a>
-
-  <a href="#" aria-label="YouTube">
+  <a href="#" class="gv-footer__social" aria-label="YouTube">
     <i data-lucide="youtube"></i>
   </a>
-
-  <a href="mailto:info@yourdomain.com" aria-label="Email">
+  <a href="mailto:info@yourdomain.com" class="gv-footer__social" aria-label="Email">
     <i data-lucide="mail"></i>
   </a>
 </div>
@@ -1082,7 +1052,7 @@
 
 
 
-<script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@0.542.0/dist/umd/lucide.min.js"></script>
 
 <script src="./index.js"></script>
 

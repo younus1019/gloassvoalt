@@ -85,6 +85,7 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
+  border-radius: 5px;
   font-family: var(--body-font);
   font-size: 11px;
   font-weight: 700;
@@ -100,7 +101,7 @@
 }
 
 .gv-contact-hero__primary:hover {
-  background: var(--primary);
+  background: var(--secondary);
   border-color: var(--primary);
   transform: translateY(-2px);
 }
@@ -346,12 +347,35 @@ body.dark-mode .gv-contact-hero__secondary {
 }
 
 .gv-contact-details__header .gv-section-eyebrow {
-  display: inline-block;
-  margin-bottom: 12px;
-  color: var(--secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 12px;
+  padding: 0;
+  color: #EF4444 !important;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.16em;
+  line-height: 1.8;
+}
+
+.gv-contact-details__header .gv-section-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 34px;
+  min-width: 34px;
+  height: 1px;
+  background-color: #EF4444 !important;
+  flex-shrink: 0;
+}
+
+body.dark-mode .gv-contact-details__header .gv-section-eyebrow {
+  color: #EF4444 !important;
+}
+
+body.dark-mode .gv-contact-details__header .gv-section-eyebrow::before {
+  background-color: #EF4444 !important;
 }
 
 .gv-contact-details__header .gv-section-title {
@@ -796,12 +820,35 @@ body.dark-mode .gv-contact-form__field select option {
 }
 
 .gv-contact-location__header .gv-section-eyebrow {
-  display: inline-block;
-  margin-bottom: 12px;
-  color: var(--secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 12px;
+  padding: 0;
+  color: #EF4444 !important;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.15em;
+  line-height: 1.8;
+}
+
+.gv-contact-location__header .gv-section-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 34px;
+  min-width: 34px;
+  height: 1px;
+  flex-shrink: 0;
+  background-color: #EF4444 !important;
+}
+
+body.dark-mode .gv-contact-location__header .gv-section-eyebrow {
+  color: #EF4444 !important;
+}
+
+body.dark-mode .gv-contact-location__header .gv-section-eyebrow::before {
+  background-color: #EF4444 !important;
 }
 
 .gv-contact-location__header .gv-section-title {
@@ -1154,12 +1201,35 @@ body.dark-mode .gv-contact-location__map {
 }
 
 .gv-contact-faq__intro .gv-section-eyebrow {
-  display: inline-block;
-  margin-bottom: 12px;
-  color: var(--secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 12px;
+  padding: 0;
+  color: #EF4444 !important;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.15em;
+  line-height: 1.8;
+}
+
+.gv-contact-faq__intro .gv-section-eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 34px;
+  min-width: 34px;
+  height: 1px;
+  flex-shrink: 0;
+  background-color: #EF4444 !important;
+}
+
+body.dark-mode .gv-contact-faq__intro .gv-section-eyebrow {
+  color: #EF4444 !important;
+}
+
+body.dark-mode .gv-contact-faq__intro .gv-section-eyebrow::before {
+  background-color: #EF4444 !important;
 }
 
 .gv-contact-faq__intro .gv-section-title {
@@ -1423,12 +1493,35 @@ body.dark-mode .gv-contact-faq__help-icon {
 }
 
 .gv-contact-cta__eyebrow {
-  display: inline-block;
-  margin-bottom: 14px;
-  color: var(--secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 14px;
+  padding: 0;
+  color: #EF4444 !important;
+  font-family: "Montserrat", sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.15em;
+  line-height: 1.8;
+}
+
+.gv-contact-cta__eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 34px;
+  min-width: 34px;
+  height: 1px;
+  flex-shrink: 0;
+  background-color: #EF4444 !important;
+}
+
+body.dark-mode .gv-contact-cta__eyebrow {
+  color: #EF4444 !important;
+}
+
+body.dark-mode .gv-contact-cta__eyebrow::before {
+  background-color: #EF4444 !important;
 }
 
 .gv-contact-cta__content h2 {
@@ -1495,7 +1588,7 @@ body.dark-mode .gv-contact-faq__help-icon {
       rgba(11, 15, 20, 0.08) 15%,
       rgba(11, 15, 20, 0.78) 100%
     ),
-    url("./images/contact-cta.jpg");
+    url("./images/service\ 8.jfif");
   background-position: center;
   background-size: cover;
   transition: transform 0.6s ease;
@@ -1611,3 +1704,5 @@ body.dark-mode .gv-contact-cta__visual {
     min-height: 300px;
   }
 }
+
+

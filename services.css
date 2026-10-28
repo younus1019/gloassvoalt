@@ -2384,16 +2384,48 @@ body.dark-mode .gv-paint-restoration {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 12px;
   margin-bottom: 20px;
-  padding: 9px 15px;
-  border: 1px solid rgba(239, 68, 68, 0.28);
-  border-radius: 30px;
-  background: rgba(239, 68, 68, 0.07);
-  color: var(--secondary);
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #EF4444 !important;
+  font-family: "Montserrat", sans-serif;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 1.5px;
+  line-height: 1.8;
   text-transform: uppercase;
+}
+
+.gv-services-closing__eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 34px;
+  min-width: 34px;
+  height: 1px;
+  background: #EF4444 !important;
+  flex-shrink: 0;
+}
+
+body.dark-mode .gv-services-closing__eyebrow {
+  color: #EF4444 !important;
+}
+
+body.dark-mode .gv-services-closing__eyebrow::before {
+  background: #EF4444 !important;
+}
+
+@media screen and (max-width: 767px) {
+  .gv-services-closing__eyebrow {
+    gap: 10px;
+    font-size: 9px;
+  }
+
+  .gv-services-closing__eyebrow::before {
+    width: 24px;
+    min-width: 24px;
+  }
 }
 
 .gv-services-closing__card h2 {
@@ -2434,8 +2466,9 @@ body.dark-mode .gv-paint-restoration {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   gap: 12px;
-  border-radius: 30px;
+  border-radius: 5px;
   font-family: var(--body-font);
   font-size: 12px;
   font-weight: 700;
@@ -2451,7 +2484,7 @@ body.dark-mode .gv-paint-restoration {
 }
 
 .gv-services-closing__primary:hover {
-  background: var(--primary);
+  background: var(--secondary);
   border-color: var(--primary);
   transform: translateY(-2px);
 }

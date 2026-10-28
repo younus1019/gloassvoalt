@@ -315,8 +315,8 @@ input:focus-visible {
 
 .signup-brand img {
   display: block;
-  width: 42px;
-  height: 42px;
+  width: 55px;
+  height: 55px;
   flex: 0 0 42px;
   object-fit: contain;
 }
@@ -349,10 +349,10 @@ input:focus-visible {
   letter-spacing: 1.1px;
   text-align: center;
 }
-
+ 
 .signup-brand:hover .signup-brand-name {
   color: var(--su-red);
-}
+} 
 
 .signup-eyebrow-right {
   margin-top: 11px;
@@ -913,4 +913,25 @@ html[dir="rtl"] .signup-back-link {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+.signup-brand,
+.signup-brand:visited,
+.signup-brand:hover,
+.signup-brand:active {
+  color: var(--su-text) !important;
+  text-decoration: none !important;
+}
+
+.signup-brand .signup-brand-name {
+  color: var(--su-text) !important;
+  transition: none;
+}
+
+.signup-brand:hover .signup-brand-name {
+  color: var(--su-text) !important;
+}
+
+.signup-brand .signup-brand-name span {
+  color: var(--su-red) !important;
 }

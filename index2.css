@@ -2979,6 +2979,7 @@ body.dark-mode .gv2-finish__footer > span {
   color: var(--heading-color);
   font-family: var(--body-font);
   font-size: 9px;
+    background: var(--secondary);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-decoration: none;
@@ -2996,11 +2997,11 @@ body.dark-mode .gv2-finish__footer > span {
 .gv2-standard__cta:hover {
   border-color: var(--secondary);
   background: var(--secondary);
-  color: #fff;
+  color:black;
 }
 
 .gv2-standard__cta:hover span {
-  color: #fff;
+  color: black;
 }
 
 /* LIGHT / DARK THEME */
@@ -3338,6 +3339,26 @@ body.dark-mode .gv2-standard__rule {
   transform: translateY(-50%);
 }
 
+
+.gv2-final-cta__content .gv-section-eyebrow {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 12px;
+  color: #EF4444;
+}
+
+.gv2-final-cta__content .gv-section-eyebrow::before {
+  content: "" !important;
+  display: inline-block !important;
+  width: 34px !important;
+  min-width: 34px;
+  height: 1px !important;
+  flex: 0 0 34px;
+  background-color: #EF4444 !important;
+}
+
+
+
 /* Top label row */
 
 .gv2-final-cta__top,
@@ -3424,6 +3445,7 @@ body.dark-mode .gv2-standard__rule {
   gap: 12px;
   min-height: 44px;
   padding: 12px 18px;
+  border-radius: 5px;
   background: var(--secondary);
   color: #fff;
   font-family: var(--body-font);
@@ -3437,7 +3459,7 @@ body.dark-mode .gv2-standard__rule {
 }
 
 .gv2-final-cta__button:hover {
-  background: var(--primary);
+  background: var(--secondary);
   transform: translateY(-2px);
 }
 
@@ -3623,4 +3645,25 @@ body.dark-mode .gv2-final-cta__bottom {
   .gv2-final-cta__content h2 {
     font-size: 2.5rem;
   }
+}
+
+
+.gv-section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  color: #EF4444;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+}
+
+.gv-section-eyebrow::before {
+  width: 34px;
+  height: 1px;
+  flex-shrink: 0;
+  background: #EF4444;
+  content: "";
 }
